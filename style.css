@@ -1,0 +1,132 @@
+
+body{
+    background-image: linear-gradient(to right, rgba(26, 25, 31, 0.8), rgba(26, 25, 31, 0.6)), url(./assets/hero.jpg);
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    background-attachment: fixed
+    font-family: 'Quicksand', sans-serif
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    -webkit-font-smoothing: antialiased
+
+}
+/* Navbar.....................................*/
+
+.navbar{
+    background-color: rgba(32, 35, 44, 0.5);
+}
+
+.navbar-toggler:focus, 
+.navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Form.........................................*/
+.wraper{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 460px;
+            background-color: #ffffff;
+            padding-left: 50px;
+            padding-top: 30px;
+            padding-bottom: 60px;
+            
+}
+.p1{
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: -10px;
+        }
+.textbox{
+            border: 1px solid #ffffff;
+            font-size: 18px;
+            outline: none;
+            border-bottom: 2px solid #adadad;
+            padding-top: 25px;
+            width: 350px;
+            background: transparent;
+}
+
+.submit{
+            width: 120px;
+            background-color: #005da6;
+            color: white;
+            font-size: 18px;
+            padding: 7px;
+            border: 1px solid #005da6;
+            margin-left: 240px;
+            margin-top: 15px;
+            opacity: 0.9;
+            margin-top: 50px;
+        }
+.submit:hover{
+            cursor: pointer;
+            opacity: 1;
+        }
+
+/* For Dashboard................................*/
+.content{
+    font-weight: lighter;
+    text-align: left;
+    width: 100vw;
+    height: 100vh;
+    vertical-align: middle;
+    display: table-cell;
+    padding: 0 6.2% 6.2%;
+    color: #f5f5f5;
+    font-weight: 100;
+    -webkit-animation: transitionIn 2s;
+    animation: transitionIn 2s;
+}
+.big{
+    padding: 1px;
+    margin: 1px;
+    font-size: 400%;
+    color: #005da6;
+}
+
+/* For Mobile Screen................................*/
+@media only screen and (max-width: 768px) {
+    .content {
+        padding-top: 0vh;
+        text-align: center;
+        padding-left: 0%;
+    }
+
+    .navbar
+    {
+        background-color: #171B27;
+    }
+
+    .big{
+        text-align:center;
+        font-size:270%;
+    }
+
+    .medium{
+        text-align:center;
+        font-size:190%;
+    }
+}
+
+.navbar-brand{
+    cursor: pointer;
+}
+
+
+/* Try ................................*/
+
+
+
+
+
+
+
+
+
+
