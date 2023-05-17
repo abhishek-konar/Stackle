@@ -42,7 +42,10 @@
     </form>
   </div>
 </nav>
+<!-------------------Home selection end-------------------->
 
+  
+</section>
 </body>
 </html>
 
