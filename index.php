@@ -12,6 +12,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+
+<!-------------------Navbar-------------------->
 <nav class="navbar navbar-expand-lg navbar-dark static-top">
 		<div class="container p-0">
 			<a class="navbar-brand" href="index.php">Stackle</a>
@@ -40,6 +42,7 @@
     </form>
   </div>
 </nav>
+
 </body>
 </html>
 
