@@ -23,6 +23,12 @@ body{
     outline: none;
     box-shadow: none;
 }
+/* Cart and Logo.......................................*/
+.cart
+{
+    width:25px;
+     height: 25px;
+}
 
 /* Form.........................................*/
 .wraper{
