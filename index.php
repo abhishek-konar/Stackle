@@ -42,10 +42,36 @@
     </form>
   </div>
 </nav>
-<!-------------------Home selection end-------------------->
+<!-------------------Our Product-------------------->
+<div class="container">
 
-  
-</section>
+<h3 class="title"> Our products </h3>
+
+<div class="products-container">
+
+   <div class="product" data-name="p-1">
+      <img src="assets/1.png" alt="">
+      <h3>Grocery and gourmet</h3>
+   </div>
+
+   <div class="product" data-name="p-2">
+      <img src="assets/2.png" alt="">
+      <h3>Books</h3>
+      
+   </div>
+
+   <div class="product" data-name="p-3">
+      <img src="assets/3.png" alt="">
+      <h3>Medicinal Product</h3>
+   </div>
+
+   <div class="product" data-name="p-4" >
+      <img src="assets/4.png" alt="">
+      <h3>Fashion</h3>
+   </div>
+
+</div>
+</div>
 </body>
 </html>
 
