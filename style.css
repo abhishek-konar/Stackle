@@ -34,7 +34,8 @@ body{
 .container{
     max-width: 1200px;
     margin:0 auto;
-    padding:3rem 2rem;
+    padding:1rem 2rem;
+    
  }
  
  .container .title{
@@ -46,7 +47,7 @@ body{
  }
  .container .products-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 90px));
     gap:2rem;
  }
  .container .products-container .product{
@@ -57,6 +58,8 @@ body{
     outline: .1rem solid #ccc;
     outline-offset: -1.5rem;
     cursor: pointer;
+    border-radius: 5px;
+    
  } 
  
  .container .products-container .product:hover{

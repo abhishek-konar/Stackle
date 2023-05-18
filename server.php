@@ -44,9 +44,6 @@ while($row=mysqli_fetch_assoc($res)){
         <a class="nav-link" href="#">Other</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Logout</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>
       </li>
       <li class="nav-item dropdown">
