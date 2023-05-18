@@ -33,7 +33,7 @@
           $_SESSION['em']=$email;
           $_SESSION['pa']=$pass;
           $flag++;
-          echo "<script>window.location.href='dashboard.php' </script>";
+          echo "<script>window.location.href='admin_dashboard.php' </script>";
           $r=$con->querry($sql);
         }
       }
