@@ -51,7 +51,7 @@ while($row=mysqli_fetch_assoc($res)){
              <?php echo "Hellow, ". $n; ?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Your Account</a>
+          <a class="dropdown-item" href="myaccount.php">Your Account</a>
           <a class="dropdown-item" href="logout.php">Logout</a>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
