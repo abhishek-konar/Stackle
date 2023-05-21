@@ -16,6 +16,7 @@
 <!--Tab 2-->
 		<div class="card_item">
 			<div class="card_inner">
+				<img src="./assets/address.svg">
                 <div class="medium">Your Address</div>
                 <div class="film">Edit, Add and Delete your Address </div>
 			</div>
@@ -34,6 +35,7 @@
 <!--Tab 3-->
 		<div class="card_item">
 			<div class="card_inner">
+				<img src="./assets/contact_us.svg">
                  <div class="medium">Contact Us</div>
                  <div class="film">Edit, Add and Delete your Address</div>
 			</div>
