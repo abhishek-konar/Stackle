@@ -7,6 +7,7 @@
 	<div class="cards_wrap">
 		<div class="card_item">
 			<div class="card_inner">
+			<img src="./assets/login.svg">
             <div class="medium">Login & Security</div>
 				<div class="film">Edit login, name and Pasdword</div>
 			</div>

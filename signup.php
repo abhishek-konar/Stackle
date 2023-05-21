@@ -1,7 +1,7 @@
 <?php include ('./index.php'); ?>
 
 <form  name="register" method="post" action="" >    
-    <div class="wraper1">
+    <div class="wrap">
         
           <p class="p1">Sign Up</p>
           <input class="textbox"  type="text" name="name" placeholder="Name">
