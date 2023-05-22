@@ -1,25 +1,19 @@
 <?php include ('./index.php'); ?>
 
+<!--Insert Signup Form-->
 <form  name="register" method="post" action="" >    
     <div class="wrap">
-        
           <p class="p1">Sign Up</p>
           <input class="textbox"  type="text" name="name" placeholder="Name">
-
           <input class="textbox" type="text" name="email" placeholder="Email, phone, or Skype">
-        
           <input class="textbox"  type="password" name="pass" placeholder="Password">
-
           <input class="textbox"  type="text" name="phone" placeholder="Password">
-        
           <input type="submit" value="Next" class="submit" name="register">
-        
     </div>
-  
   </form>
   
 
-
+<!--Insert Sign up Details-->
   <?php 
     error_reporting (0);
     if (isset ($_POST['register'])){

@@ -31,6 +31,8 @@ body{
      height: 25px;
 }
 
+
+
 /* Account info.......................................*/
 .wrapper .header{
 	width: 100%;
@@ -118,12 +120,13 @@ body{
 
 @media screen and (max-width: 768px){
 	.cards_wrap .card_item{
-		width: 50%;
+		width: 10%;
 	}
 	.wrapper .header{
 		font-size: 16px;
 		height: 60px;
 	}
+    
 }
 
 @media screen and (max-width: 568px){
@@ -206,7 +209,18 @@ body{
             width: 350px;
             background: transparent;
 }
-
+.t{
+    padding-top: 15px;
+}
+.s{
+    width: 350px;
+    padding: 12px, 20px;
+    margin: 8px 0;
+    border: 1px solid #696969;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #e4e1e1;
+}
 .submit{
             width: 120px;
             background-color: #005da6;

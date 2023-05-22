@@ -15,18 +15,20 @@
 
 <!--Tab 2-->
 		<div class="card_item">
+			<a href="address.php" style="text-decoration: none;">
 			<div class="card_inner">
 				<img src="./assets/address.svg">
                 <div class="medium">Your Address</div>
                 <div class="film">Edit, Add and Delete your Address </div>
 			</div>
+			</a>
 		</div>
 
 		
 <!--Tab 3-->
 		<div class="card_item">
 			<div class="card_inner">
-				<img src="./assets/demo.svg">
+				<img  src="./assets/demo.svg">
                  <div class="medium">Contact</div>
                  <div class="film">Edit and Add yours Phone number </div>
 			</div>
