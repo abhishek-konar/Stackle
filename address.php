@@ -1,16 +1,17 @@
 <?php include ('./server.php'); ?>
 
 <!--Address Form-->
-<form  name="register" method="post" action="" >    
+<form  name="insert" method="post" action="" onsubmit="return myfunction()" >    
     <div class="wrap">
           <p class="p1">Add a new address</p>
-          <input class="textbox"  type="text" name="name" placeholder="Full name (First and Last name)">
-          <input class="textbox" type="text" name="phone" placeholder="Mobile number">
-          <input class="textbox"  type="pin" name="pin" placeholder="Pin" maxlength="9">
-          <input class="textbox"  type="text" name="area" placeholder="Area, Street, Sector, Village">
+          <input class="textbox"  type="text" id="name" name="name" placeholder="Full name (First and Last name)">
+          <input class="textbox" type="text" id="mobilenumbe" name="phone" placeholder="Mobile number" maxlength="10">
+          <input class="textbox"  type="pin" id="pin" name="pin" placeholder="Pin" maxlength="9">
+          <input class="textbox"  type="text" id="area" name="area" placeholder="Area, Street, Sector, Village">
+          <input class="textbox"  type="text" id="city" name="city" placeholder="Town/City">
           <input class="textbox"  type="text" name="land" placeholder="Landmark (E.g. near Stackle House)">
             <div class="t">
-                <select name="state" Class="s">
+                <select id="state" name="state" Class="s">
                     <option value="">Select Yours State Name</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -37,9 +38,9 @@
                     <option value="West Bengal">West Bengal</option>
                 </select>
         </div>
+        <input class="textbox"  type="text" id="Country" name="Country" placeholder="Country/Region">
         <p style="color:red" id="myalert"></p>
         <input type="submit" value="Add address" class="submit" name="insert">
-
     </div>
   </form>
   
@@ -63,17 +64,10 @@
         $area=$_POST['area'];
         $land=$_POST['land'];
         $state=$_POST['state'];
-        if($state==""){
-            echo '<script>document.getElementById("myalert").innerHTML= "Please Select State" </script>';
-            mysqli_close($con);
-          }
-
-        else{
-            $sql="INSERT INTO address (email, name, phone, pin, area, land, state) VALUE ('$email', '$name', '$phone', '$pin', '$area', '$land', '$state')";
-            $run=mysqli_query($con, $sql);
-        }
-
-      
+        $city=$_POST['city'];
+        $Country=$_POST['Country'];
+        $sql="INSERT INTO address (email, Country, name, phone, pin, area, land, city, state) VALUE ('$email', '$Country', '$name', '$phone', '$pin', '$area', '$land', '$city', '$state')";
+        $run=mysqli_query($con, $sql);
     }
     
   ?>
