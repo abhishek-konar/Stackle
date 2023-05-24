@@ -2,7 +2,16 @@
 
 <div class="wrapper">
     <div class="cards_wrap">
-        
+            <div class="card_item">
+                <div class="card_inner">
+                    <div class="medium"></div>
+                    <div class="film"></div>
+                    <div class="film"></div>
+                    <div class="film"> Land mark:</div>
+                    <div class="film">Phone number</div>
+                </div>
+            </div>
+
 <!--All address Details-->
         <?php
         error_reporting(0);
