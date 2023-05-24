@@ -37,9 +37,12 @@
                     <div class='film'>".$city. ", ". $state. " " .$pin. "</div>
                     <div class='film'> Land mark: ".$land. "</div>
                     <div class='film'>Phone number: ". $phone. "</div>
+                    <input type='submit' value='Edit'>
+                    <input type='submit' value='Delete'>
                 </div>
             </div>";
 }
 ?>
+
     </div>
 </div>
