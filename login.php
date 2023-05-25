@@ -3,7 +3,7 @@
 
 <body>
 <form method="post" action="" >    
-    <div class="wrap">
+    <div class="box">
           <p class="p1">Login</p>
           <input class="textbox"  type="text" name="email" placeholder="Email">
           <input class="textbox"  type="password" name="pass" placeholder="Password">

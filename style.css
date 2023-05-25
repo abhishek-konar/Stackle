@@ -47,6 +47,7 @@ body{
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	font-weight: 900;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .cards_wrap{
@@ -134,55 +135,13 @@ body{
 	}
 	.wrapper .header{
 		font-size: 14px;
+        
 	}
 }
 
 
-
-
-/* Our Product....................................*/
-.container{
-    max-width: 1200px;
-    margin:0 auto;
-    padding:1rem 2rem;
-    
- }
- 
- .container .title{
-    font-size: 3.5rem;
-    color: blue;
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    text-align: center;
- }
- .container .products-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 90px));
-    gap:2rem;
- }
- .container .products-container .product{
-    text-align: center;
-    padding:3rem 2rem;
-    background: #fff;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-    outline: .1rem solid #ccc;
-    outline-offset: -1.5rem;
-    cursor: pointer;
-    border-radius: 5px;
-    
- } 
- 
- .container .products-container .product:hover{
-    outline: .2rem solid #C2185B;
-    outline-offset: 0;
- }
- 
- .container .products-container .product img{
-    height: 25rem;
- }
-
 /* Form.........................................*/
-.wrap{
+.box{
             position: absolute;
             top: 50%;
             left: 50%;
@@ -287,7 +246,7 @@ body{
 }
 
 
-/* Try ................................*/
+
 
 
 

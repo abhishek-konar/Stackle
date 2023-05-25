@@ -2,7 +2,7 @@
 
 <!--Address Form-->
 <form  name="insert" method="post" action="" onsubmit="return myfunction()" >    
-    <div class="wrap">
+    <div class="box">
           <p class="p1">Add a new address</p>
           <input class="textbox"  type="text" id="name" name="name" placeholder="Full name (First and Last name)">
           <input class="textbox" type="text" id="mobilenumbe" name="phone" placeholder="Mobile number" maxlength="10">

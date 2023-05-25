@@ -1,6 +1,7 @@
 <?php include ('./server.php'); ?>
 
 <div class="wrapper">
+    <div class="header">Your Address</div>
     <div class="cards_wrap">
             <div class="card_item">
                 <div class="card_inner">

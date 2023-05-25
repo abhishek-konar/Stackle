@@ -2,7 +2,7 @@
 
 <!--Insert Signup Form-->
 <form  name="register" method="post" action="" >    
-    <div class="wrap">
+    <div class="box">
           <p class="p1">Sign Up</p>
           <input class="textbox"  type="text" name="name" placeholder="Name">
           <input class="textbox" type="text" name="email" placeholder="Email, phone, or Skype">
