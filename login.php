@@ -4,7 +4,7 @@
 <body>
 <form method="post" action="" >    
     <div class="box">
-          <p class="p1">Login</p>
+          <p class="large">Login</p>
           <input class="textbox"  type="text" name="email" placeholder="Email">
           <input class="textbox"  type="password" name="pass" placeholder="Password">
           <p style="color:red" id="myalert"></p>

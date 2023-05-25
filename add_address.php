@@ -3,15 +3,15 @@
 <!--Address Form-->
 <form  name="insert" method="post" action="" onsubmit="return myfunction()" >    
     <div class="box">
-          <p class="p1">Add a new address</p>
+          <p class="large">Add a new address</p>
           <input class="textbox"  type="text" id="name" name="name" placeholder="Full name (First and Last name)">
           <input class="textbox" type="text" id="mobilenumbe" name="phone" placeholder="Mobile number" maxlength="10">
           <input class="textbox"  type="pin" id="pin" name="pin" placeholder="Pin" maxlength="9">
           <input class="textbox"  type="text" id="area" name="area" placeholder="Area, Street, Sector, Village">
           <input class="textbox"  type="text" id="city" name="city" placeholder="Town/City">
           <input class="textbox"  type="text" name="land" placeholder="Landmark (E.g. near Stackle House)">
-            <div class="t">
-                <select id="state" name="state" Class="s">
+            <div class="state">
+                <select id="state" name="state" Class="select">
                     <option value="">Select Yours State Name</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>

@@ -1,5 +1,4 @@
-
-body{
+body {
     background-image: linear-gradient(to right, rgba(26, 25, 31, 0.8), rgba(26, 25, 31, 0.6)), url(./assets/hero.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -15,162 +14,61 @@ body{
 
 
 /* Navbar.....................................*/
-.navbar{
+.navbar {
     background-color: rgba(32, 35, 44, 0.5);
 }
 
-.navbar-toggler:focus, 
+.navbar-toggler:focus,
 .navbar-toggler:active {
     outline: none;
     box-shadow: none;
 }
+.navbar-brand {
+    cursor: pointer;
+}
+
 /* Cart and Logo.......................................*/
-.cart
-{
-    width:25px;
-     height: 25px;
-}
-
-
-
-/* Account info.......................................*/
-.wrapper .header{
-	width: 100%;
-	height: 50px;
-	background: #e36686;
-	color: #fff;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 20px;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	font-weight: 900;
-    font-family: 'Roboto Mono', monospace;
-}
-
-.cards_wrap{
-	padding: 20px;
-	margin-left: 320px;
-	display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 90px));
-    max-width: 1200px;
-    margin:0 auto;
-    padding:1rem 2rem;    
-}
-
-.cards_wrap .card_item{
-	padding: 15px 25px;
-	width: 25%;
-}
-
-.cards_wrap .card_inner{
-	background: #ffffff;
-	border-radius: 5px;
-	padding: 14px 20px;
-	min-width: 225px;
-	width: 100%;
-}
-
-.cards_wrap .card_inner:hover{
-    background: #BDBDBD;
-}
-.cards_wrap .card_item img{
-	width: 80px;
-	height: 80px;
-	margin-bottom: 5px;
-}
-
-.cards_wrap .card_item .role_name{
-	color: #e36686;
-	font-weight: 900;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	font-size: 20px;
-	white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.cards_wrap .card_item .real_name{
-	color: #b6c0c2;
-	font-size: 12px;
-	font-weight: 100;
-	margin: 5px 0 10px;
-}
-.cards_wrap .card_item .medium{
-	font-size: 20px;
-    font-weight: 400;
-	line-height: 24px;
-	color: black;
-}
-
-.cards_wrap .card_item .film{
-	font-size: 14px;
-	line-height: 24px;
-	color: black;
-}
-
-@media screen and (max-width: 1024px){
-	.cards_wrap .card_item{
-		width: 33%;
-	}
-}
-
-@media screen and (max-width: 768px){
-	.cards_wrap .card_item{
-		width: 10%;
-	}
-	.wrapper .header{
-		font-size: 16px;
-		height: 60px;
-	}
-    
-}
-
-@media screen and (max-width: 568px){
-	.cards_wrap .card_item{
-		width: 100%;
-	}
-	.wrapper .header{
-		font-size: 14px;
-        
-	}
+.cart {
+    width: 25px;
+    height: 25px;
 }
 
 
 /* Form.........................................*/
-.box{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 460px;
-            background-color: #ffffff;
-            padding-left: 50px;
-            padding-top: 30px;
-            padding-bottom: 60px;
-            
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 460px;
+    background-color: #ffffff;
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+
 }
-.p1{
-            font-size: 30px;
-            font-weight: bold;
-            margin-top: -10px;
-        }
-.textbox{
-            border: 1px solid #ffffff;
-            font-size: 18px;
-            outline: none;
-            border-bottom: 2px solid #adadad;
-            padding-top: 25px;
-            width: 350px;
-            background: transparent;
+
+.large{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -10px;
 }
-.t{
+
+.textbox {
+    border: 1px solid #ffffff;
+    font-size: 18px;
+    outline: none;
+    border-bottom: 2px solid #adadad;
+    padding-top: 25px;
+    width: 350px;
+    background: transparent;
+}
+
+.state{
     padding-top: 15px;
 }
-.s{
+
+.select{
     width: 350px;
     padding: 12px, 20px;
     margin: 8px 0;
@@ -179,25 +77,27 @@ body{
     box-sizing: border-box;
     background-color: #e4e1e1;
 }
-.submit{
-            width: 120px;
-            background-color: #005da6;
-            color: white;
-            font-size: 18px;
-            padding: 7px;
-            border: 1px solid #005da6;
-            margin-left: 240px;
-            margin-top: 15px;
-            opacity: 0.9;
-            margin-top: 50px;
-        }
-.submit:hover{
-            cursor: pointer;
-            opacity: 1;
-        }
+
+.submit {
+    width: 120px;
+    background-color: #005da6;
+    color: white;
+    font-size: 18px;
+    padding: 7px;
+    border: 1px solid #005da6;
+    margin-left: 240px;
+    margin-top: 15px;
+    opacity: 0.9;
+    margin-top: 50px;
+}
+
+.submit:hover {
+    cursor: pointer;
+    opacity: 1;
+}
 
 /* For Dashboard................................*/
-.content{
+.content {
     font-weight: lighter;
     text-align: left;
     width: 100vw;
@@ -210,7 +110,8 @@ body{
     -webkit-animation: transitionIn 2s;
     animation: transitionIn 2s;
 }
-.big{
+
+.big {
     padding: 1px;
     margin: 1px;
     font-size: 400%;
@@ -225,35 +126,18 @@ body{
         padding-left: 0%;
     }
 
-    .navbar
-    {
+    .navbar {
         background-color: #171B27;
     }
 
-    .big{
-        text-align:center;
-        font-size:270%;
+    .big {
+        text-align: center;
+        font-size: 270%;
     }
 
-    .medium{
-        text-align:center;
-        font-size:190%;
+    .medium {
+        text-align: center;
+        font-size: 190%;
     }
 }
-
-.navbar-brand{
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
