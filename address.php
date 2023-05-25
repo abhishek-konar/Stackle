@@ -10,12 +10,12 @@
 
 		<!--Add New Addres-->
         <div class="col-lg-4 col-sm-6">
-		<a href="add_address.php" style="text-decoration: none;">
+		    <a href="add_address.php" style="text-decoration: none;">
           <div class="item"> <span class="icon feature_box_col_one"></span></i></span>
             <h6>Modern Design</h6>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor Aenean massa.</p>
           </div>
-		</a>
+		    </a>
         </div>
 
 		
