@@ -4,6 +4,7 @@
     <div class="header">Your Address</div>
     <div class="cards_wrap">
             <div class="card_item">
+             <a href="add_address.php" style="text-decoration: none;">
                 <div class="card_inner">
                     <div class="medium"></div>
                     <div class="film"></div>
@@ -11,6 +12,7 @@
                     <div class="film"> Land mark:</div>
                     <div class="film">Phone number</div>
                 </div>
+            </a>
             </div>
 
 <!--All address Details-->
