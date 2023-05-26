@@ -1,23 +1,20 @@
 <?php include ("./index.php");?>
 
-
 <body>
-<form method="post" action="" >    
+<form method="post" action="" name="register" onsubmit="return myfunc()">       
     <div class="box">
-          <p class="large">Login</p>
-          <input class="textbox"  type="text" name="email" placeholder="Email">
+          <p class="large">Sign Up</p>
+          <input class="textbox" type="text" name="email" placeholder="Email, phone, or Skype">
           <input class="textbox"  type="password" name="pass" placeholder="Password">
           <p style="color:red" id="myalert"></p>
-          <input type="submit" value="Login" class="submit" name="login">
+          <input type="submit" value="Next" class="submit" name="register">
     </div>
-</form>
+  </form>
 
-
-
- 
+ <!--Login Form-->
   <?php 
     error_reporting (0);
-    if (isset ($_POST['login'])){
+    if (isset ($_POST['register'])){
       $con=mysqli_connect('localhost', 'root', '', 'abhishek');
     }
     if($con){
@@ -43,5 +40,4 @@
       }
     }
   ?>
-
 </body>

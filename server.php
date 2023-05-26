@@ -61,6 +61,5 @@ while($row=mysqli_fetch_assoc($res)){
     </ul>
   </div>
 </nav>
-
 </body>
 </html>
