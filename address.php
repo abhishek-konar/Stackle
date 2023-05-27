@@ -37,15 +37,16 @@
         $land=$row['land'];
         $state=$row['state'];
         $phone=$row['phone'];
-        echo "<div class='col-lg-4 col-sm-6'>".
-        "<div class='item'>". "<span class='icon feature_box_col_one'></span></i></span>".
-          "<h6>". $name. "</h6>".
-          "<p>".$area. ", </p>".
-          "<p>".$city. ", ". $state. " " .$pin."</p>".
-          "<p> Landmar: ".$land."</p>".
-          "<p>".$phone."</p>".
-        "</div>
-      </div>";       
+        echo 
+        "<div class='col-lg-4 col-sm-6'>".
+          "<div class='item'>". "<span class='icon feature_box_col_one'></span></i></span>".
+            "<h6>". $name. "</h6>".
+            "<p>".$area. ", </p>".
+            "<p>".$city. ", ". $state. " " .$pin."</p>".
+            "<p> Landmar: ".$land."</p>".
+            "<p>".$phone."</p>".
+          "</div>
+        </div>";       
 }
 ?>
       </div>
