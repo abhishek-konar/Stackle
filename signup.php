@@ -23,8 +23,15 @@
       $name= $_POST['name'];
       $email=$_POST['email'];
       $pass=$_POST['pass'];
-      $sql="INSERT INTO user (name, email, pasword) VALUE ('$name', '$email', '$pass')";
-      $run=mysqli_query($con, $sql);
+      $check=mysqli_num_rows(mysqli_query($con, "SELECT * FROM user WHERE email='$email'"));
+      if($check>0){
+        echo '<script>document.getElementById("myalert").innerHTML= "Email id alredy register" </script>';
+        mysqli_close($con);
+      }
+      else{
+        $sql="INSERT INTO user (name, email, pasword) VALUE ('$name', '$email', '$pass')";
+        $run=mysqli_query($con, $sql);
+      }
     }
   ?>
 </body>
