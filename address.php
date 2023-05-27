@@ -27,7 +27,6 @@
         $c=mysqli_connect('localhost', 'root', '', 'abhishek');
         $q="SELECT * FROM address WHERE email='$email'";
         $res=mysqli_query($c, $q);
-
         while($row=mysqli_fetch_assoc($res)){
         $name=$row['name'];
         $phone=$row['phone'];
