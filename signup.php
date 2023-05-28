@@ -5,7 +5,7 @@
     <div class="box">
           <p class="large">Sign Up</p>
           <input class="textbox"  type="text" name="name" placeholder="Name">
-          <input class="textbox" type="text" name="email" placeholder="Email, phone, or Skype">
+          <input class="textbox" type="text" name="email" placeholder="Email">
           <input class="textbox"  type="password" name="pass" placeholder="Password">
           <p style="color:red" id="myalert"></p>
           <input type="submit" value="Next" class="submit" name="register">
@@ -29,8 +29,9 @@
         mysqli_close($con);
       }
       else{
-        $sql="INSERT INTO user (name, email, pasword) VALUE ('$name', '$email', '$pass')";
+        $sql="INSERT INTO user (name, email, password) VALUE ('$name', '$email', '$pass')";
         $run=mysqli_query($con, $sql);
+        echo "<script>window.location.href='admin_dashboard.php' </script>";
       }
     }
   ?>

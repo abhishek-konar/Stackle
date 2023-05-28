@@ -21,7 +21,7 @@ session_start();
 $email=$_SESSION['em'];
 $pass=$_SESSION['pa'];
 $c=mysqli_connect('localhost', 'root', '', 'abhishek');
-$q="SELECT * FROM user WHERE email='$email'AND pasword='$pass'";
+$q="SELECT * FROM user WHERE email='$email'AND password='$pass'";
 $res=mysqli_query($c, $q);
 if(mysqli_num_rows($res)==0)
 {

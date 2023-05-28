@@ -7,7 +7,7 @@
     <div class="container">
       <div class="row">
         <div class="section-head col-sm-12">
-          <h4><span>Why Choose</span> Me?</h4>
+          <h4><span>My</span> Account</h4>
         </div>
 
 		<!--Tab 1-->
