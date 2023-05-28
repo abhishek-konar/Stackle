@@ -24,7 +24,7 @@
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-						<a class="nav-link" href="./login.php">Login</a>
+						<a class="nav-link" href="./login.php" id="form-open">Login</a>
           </li>
           <li class="nav-item">
 						<a class="nav-link" href="./signup.php">Sign up</a>

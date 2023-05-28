@@ -7,7 +7,7 @@
           <input class="textbox"  type="text" id="name" name="name" placeholder="Full name (First and Last name)" maxlength="50">
           <input class="textbox" type="text" id="mobilenumbe" name="phone" placeholder="Mobile number" maxlength="10">
           <input class="textbox"  type="pin" id="pin" name="pin" placeholder="Pin" maxlength="9">
-          <input class="textbox"  type="text" id="area" name="area" placeholder="Area, Street, Sector, Village" maxlength="50">
+          <input class="textbox"  type="text" id="area" name="area" placeholder="Area, Street, Sector, Village">
           <input class="textbox"  type="text" id="city" name="city" placeholder="Town/City" maxlength="40">
           <input class="textbox"  type="text" name="land" placeholder="Landmark (E.g. near Stackle House)" maxlength="50">
             <div class="state">

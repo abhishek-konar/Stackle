@@ -7,6 +7,7 @@
           <input class="textbox" type="text" name="email" placeholder="Email">
           <input class="textbox"  type="password" name="pass" placeholder="Password">
           <p style="color:red" id="myalert"></p>
+          <a href="signup.php" style="text-decoration: none;"> <span style="color:black;">No account?</span> Create one!</a>
           <input type="submit" value="Next" class="submit" name="register">
     </div>
   </form>
@@ -30,7 +31,7 @@
           $_SESSION['em']=$email;
           $_SESSION['pa']=$pass;
           $flag++;
-          echo "<script>window.location.href='admin_dashboard.php' </script>";
+          echo "<script>window.location.href='dashboard.php' </script>";
           $r=$con->querry($sql);
         }
       }

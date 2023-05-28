@@ -8,6 +8,7 @@
           <input class="textbox" type="text" name="email" placeholder="Email">
           <input class="textbox"  type="password" name="pass" placeholder="Password">
           <p style="color:red" id="myalert"></p>
+          <a href="signup.php" style="text-decoration: none;"> <span>Can’t access your account?</span></a>
           <input type="submit" value="Next" class="submit" name="register">
     </div>
   </form>
@@ -31,7 +32,7 @@
       else{
         $sql="INSERT INTO user (name, email, password) VALUE ('$name', '$email', '$pass')";
         $run=mysqli_query($con, $sql);
-        echo "<script>window.location.href='admin_dashboard.php' </script>";
+        echo "<script>window.location.href='dashboard.php' </script>";
       }
     }
   ?>
