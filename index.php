@@ -29,14 +29,7 @@
           <li class="nav-item">
 						<a class="nav-link" href="./signup.php">Sign up</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><img class="cart" src="https://img.icons8.com/fluency/48/shopping-cart.png" alt="shopping-cart"/><sup>1</sup></a>
-          </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
 </body>

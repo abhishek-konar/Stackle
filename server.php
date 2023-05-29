@@ -34,21 +34,25 @@ while($row=mysqli_fetch_assoc($res)){
 }
 ?>
 
-<!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Stackle</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Other</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item dropdown">
+<!-------------------Navbar-------------------->
+<nav class="navbar navbar-expand-lg navbar-dark static-top">
+		<div class="container p-0">
+			<a class="navbar-brand" href="dashboard.php">Stackle</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+						<a class="nav-link" href="./login.php" id="form-open">Login</a>
+          </li>
+          <li class="nav-item">
+						<a class="nav-link" href="./signup.php">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img class="cart" src="https://img.icons8.com/fluency/48/shopping-cart.png" alt="shopping-cart"/><sup>1</sup></a>
+          </li>
+          <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              <?php echo "Hellow, ". $n; ?>
         </a>
@@ -59,7 +63,16 @@ while($row=mysqli_fetch_assoc($res)){
         </div>
       </li>
     </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </div>
 </nav>
 </body>
 </html>
+
+
+
+
+
