@@ -40,7 +40,7 @@
         "<div class='col-lg-4 col-sm-6'>".
           "<div class='item'>".
             "<h6>". $name. "</h6>".
-            "<p'>".$area. ", </p>".
+            "<p>".$area. ", </p>".
             "<p>".$city. ", ". $state. " " .$pin."</p>".
             "<p> Landmar: ".$land."</p>".
             "<p>".$phone."</p>".
