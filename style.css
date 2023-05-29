@@ -220,7 +220,12 @@ body {
   .rounded {
     width: 100px;
   }
-
+.a-link-normal{
+    text-decoration: none;
+    color: #007185;
+    align-items: end;
+    text-align: left;
+}
 
 /* For Mobile Screen................................*/
 @media only screen and (max-width: 768px) {

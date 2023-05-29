@@ -14,7 +14,6 @@
           <div class="item">
           <img src="./assets/add_plus.png" class="rounded" alt="img">
             <h6>Add Address</h6>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor Aenean massa.</p>
           </div>
 		    </a>
         </div>
@@ -45,7 +44,12 @@
             "<p>".$city. ", ". $state. " " .$pin."</p>".
             "<p> Landmar: ".$land."</p>".
             "<p>".$phone."</p>".
-          "</div>
+            "<a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='#'>Edit</a>
+            &nbsp; | &nbsp;
+            <a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='#'>Remove</a>
+            &nbsp; | &nbsp;
+            <a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='#'>Set as Defult</a>
+          </div>
         </div>";       
 }
 ?>
