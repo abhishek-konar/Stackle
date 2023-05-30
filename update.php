@@ -8,12 +8,12 @@ $r=mysqli_query($c, $q);
 $row=mysqli_fetch_assoc($r);
 $name=$row['name'];
 $phone=$row['phone'];
+$country=$row['country'];
 $pin=$row['pin'];
 $area=$row['area'];
 $city=$row['city'];
 $land=$row['land'];
 $state=$row['state'];
-$phone=$row['phone'];
 ?>
 
 <!--Update Address Form-->
@@ -54,7 +54,7 @@ $phone=$row['phone'];
                     <option value="West Bengal">West Bengal</option>
                 </select>
         </div>
-        <input class="textbox"  type="text" id="Country" name="Country" placeholder="Country/Region">
+        <input class="textbox"  type="text" id="Country" name="Country" value="<?php echo $country ?>" placeholder="Country/Region">
         <p style="color:red" id="myalert"></p>
         <input type="submit" value="Save changes" class="submit" name="insert">
     </div>

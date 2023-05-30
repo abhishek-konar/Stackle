@@ -30,6 +30,7 @@
         while($row=mysqli_fetch_assoc($res)){
         $name=$row['name'];
         $phone=$row['phone'];
+        $country=$row['country'];
         $pin=$row['pin'];
         $area=$row['area'];
         $city=$row['city'];
@@ -43,7 +44,8 @@
             "<p>".$area. ", </p>".
             "<p>".$city. ", ". $state. " " .$pin."</p>".
             "<p> Landmar: ".$land."</p>".
-            "<p>".$phone."</p>".
+            "<p>".$country."</p>".
+            "<p> Phone Number: ".$phone."</p>".
             "<a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='update.php?id=$row[id]'>Edit</a>
             &nbsp; | &nbsp;".
             "<a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='delete.php?id=$row[id]'> Remove</a>

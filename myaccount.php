@@ -12,7 +12,7 @@
 
 		<!--Tab 1-->
         <div class="col-lg-4 col-sm-6">
-			<a href="add_address.php" style="text-decoration: none;">
+			<a href="#" style="text-decoration: none;">
           <div class="item">
           <img src="./assets/order.png" class="rounded" alt="img">
             <h6>Your Order</h6>
