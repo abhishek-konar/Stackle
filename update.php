@@ -56,7 +56,7 @@ $phone=$row['phone'];
         </div>
         <input class="textbox"  type="text" id="Country" name="Country" placeholder="Country/Region">
         <p style="color:red" id="myalert"></p>
-        <input type="submit" value="Edit address" class="submit" name="insert">
+        <input type="submit" value="Save changes" class="submit" name="insert">
     </div>
   </form>
   
