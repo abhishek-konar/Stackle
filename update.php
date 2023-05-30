@@ -19,7 +19,7 @@ $phone=$row['phone'];
 <!--Update Address Form-->
 <form  name="insert" method="post" action="" onsubmit="return myfunction()" >    
     <div class="box">
-          <p class="large">Update yours address</p>
+          <p class="large">Edit your address</p>
           <input class="textbox"  type="text" id="name" name="name" value="<?php echo $name ?>" placeholder="Full name (First and Last name)" maxlength="50">
           <input class="textbox" type="text" id="mobilenumbe" name="phone" value="<?php echo $phone ?>" placeholder="Mobile number" maxlength="10">
           <input class="textbox"  type="pin" id="pin" name="pin" value="<?php echo $pin ?>" placeholder="Pin" maxlength="9">
