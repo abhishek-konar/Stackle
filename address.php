@@ -44,9 +44,9 @@
             "<p>".$city. ", ". $state. " " .$pin."</p>".
             "<p> Landmar: ".$land."</p>".
             "<p>".$phone."</p>".
-            "<a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='#'>Edit</a>
-            &nbsp; | &nbsp;
-            <a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='#'>Remove</a>
+            "<a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='update.php?id=$row[id]'>Edit</a>
+            &nbsp; | &nbsp;".
+            "<a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='delete.php?id=$row[id]'> Remove</a>
             &nbsp; | &nbsp;
             <a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='#'>Set as Defult</a>
           </div>

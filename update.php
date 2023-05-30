@@ -1,17 +1,33 @@
-<?php include ('./server.php'); ?>
+<?php include ('./server.php');
+error_reporting(0);
+$email=$_SESSION['em'];
+$id=$_GET['id'];
+$c=mysqli_connect('localhost', 'root', '', 'abhishek');
+$q="SELECT * FROM address WHERE id='$id'";
+$r=mysqli_query($c, $q);
+$row=mysqli_fetch_assoc($r);
+$name=$row['name'];
+$phone=$row['phone'];
+$pin=$row['pin'];
+$area=$row['area'];
+$city=$row['city'];
+$land=$row['land'];
+$state=$row['state'];
+$phone=$row['phone'];
+?>
 
-<!--Address Form-->
+<!--Update Address Form-->
 <form  name="insert" method="post" action="" onsubmit="return myfunction()" >    
     <div class="box">
-          <p class="large">Add a new address</p>
-          <input class="textbox"  type="text" id="name" name="name" placeholder="Full name (First and Last name)" maxlength="50">
-          <input class="textbox" type="text" id="mobilenumbe" name="phone" placeholder="Mobile number" maxlength="10">
-          <input class="textbox"  type="pin" id="pin" name="pin" placeholder="Pin" maxlength="9">
-          <input class="textbox"  type="text" id="area" name="area" placeholder="Area, Street, Sector, Village">
-          <input class="textbox"  type="text" id="city" name="city" placeholder="Town/City" maxlength="40">
-          <input class="textbox"  type="text" name="land" placeholder="Landmark (E.g. near Stackle House)" maxlength="50">
+          <p class="large">Update yours address</p>
+          <input class="textbox"  type="text" id="name" name="name" value="<?php echo $name ?>" placeholder="Full name (First and Last name)" maxlength="50">
+          <input class="textbox" type="text" id="mobilenumbe" name="phone" value="<?php echo $phone ?>" placeholder="Mobile number" maxlength="10">
+          <input class="textbox"  type="pin" id="pin" name="pin" value="<?php echo $pin ?>" placeholder="Pin" maxlength="9">
+          <input class="textbox"  type="text" id="area" name="area" value="<?php echo $area ?>" placeholder="Area, Street, Sector, Village">
+          <input class="textbox"  type="text" id="city" name="city" value="<?php echo $city ?>" placeholder="Town/City" maxlength="40">
+          <input class="textbox"  type="text" name="land" value="<?php echo $land ?>" placeholder="Landmark (E.g. near Stackle House)" maxlength="50">
             <div class="state">
-                <select id="state" name="state" Class="select">
+                <select id="state" name="state"  Class="select">
                     <option value="">Select Yours State Name</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -40,18 +56,14 @@
         </div>
         <input class="textbox"  type="text" id="Country" name="Country" placeholder="Country/Region">
         <p style="color:red" id="myalert"></p>
-        <input type="submit" value="Add address" class="submit" name="insert">
+        <input type="submit" value="Edit address" class="submit" name="insert">
     </div>
   </form>
   
 
 
-<!--Insert Address-->
+<!--Update Address-->
 <?php 
-
-    error_reporting(0);
-    session_start();
-    $email=$_SESSION['em'];
 
     if (isset ($_POST['insert'])){
       $con=mysqli_connect('localhost', 'root', '', 'abhishek');
@@ -66,7 +78,7 @@
         $state=$_POST['state'];
         $city=$_POST['city'];
         $Country=$_POST['Country'];
-        $sql="INSERT INTO address (email, Country, name, phone, pin, area, land, city, state) VALUE ('$email', '$Country', '$name', '$phone', '$pin', '$area', '$land', '$city', '$state')";
+        $sql="UPDATE address SET email='$email, Country='$Country', name='$name', phone='$phone', pin='$pin', area='$area', land='$land', city='$city', state='$state' WHERE id='$id'";
         $run=mysqli_query($con, $sql);
         echo "<script>window.location.href='address.php' </script>";
     }
