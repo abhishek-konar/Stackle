@@ -1,6 +1,4 @@
 <?php include ('./server.php');
-error_reporting(0);
-$email=$_SESSION['em'];
 $id=$_GET['id'];
 $c=mysqli_connect('localhost', 'root', '', 'abhishek');
 $q="SELECT * FROM address WHERE id='$id'";
@@ -16,8 +14,8 @@ $land=$row['land'];
 $state=$row['state'];
 ?>
 
-<!--Update Address Form-->
-<form  name="insert" method="post" action="" onsubmit="return myfunction()" >    
+<!--Edit Address Form-->
+<form  name="update" method="post" action="" onsubmit="return myfunction()" >    
     <div class="box">
           <p class="large">Edit your address</p>
           <input class="textbox"  type="text" id="name" name="name" value="<?php echo $name ?>" placeholder="Full name (First and Last name)" maxlength="50">
@@ -56,20 +54,14 @@ $state=$row['state'];
         </div>
         <input class="textbox"  type="text" id="Country" name="Country" value="<?php echo $country ?>" placeholder="Country/Region">
         <p style="color:red" id="myalert"></p>
-        <input type="submit" value="Save changes" class="submit" name="insert">
+        <input type="submit" value="Save changes" class="submit" name="update">
     </div>
   </form>
   
 
-
-<!--Update Address-->
 <?php 
 
-    if (isset ($_POST['insert'])){
-      $con=mysqli_connect('localhost', 'root', '', 'abhishek');
-    }
-
-    if($con){
+    if (isset($_POST['update'])){
         $name= $_POST['name'];
         $phone=$_POST['phone'];
         $pin=$_POST['pin'];
@@ -77,10 +69,15 @@ $state=$row['state'];
         $land=$_POST['land'];
         $state=$_POST['state'];
         $city=$_POST['city'];
-        $Country=$_POST['Country'];
-        $sql="UPDATE address SET email='$email, Country='$Country', name='$name', phone='$phone', pin='$pin', area='$area', land='$land', city='$city', state='$state' WHERE id='$id'";
-        $run=mysqli_query($con, $sql);
-        echo "<script>window.location.href='address.php' </script>";
+        $country=$_POST['Country'];
+
+        $sql= "UPDATE `address` SET `country`='$country',`name`='$name',`phone`='$phone',`pin`='$pin',`area`='$area',`land`='$land',`city`='$city',`state`='$state' WHERE id=$id";
+
+        $run=mysqli_query($c, $sql);
+        if($run){
+          echo "<script>window.location.href='address.php' </script>";
+        }
+        
     }
     
   ?>
