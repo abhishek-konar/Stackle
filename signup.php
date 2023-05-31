@@ -24,14 +24,18 @@
       $name= $_POST['name'];
       $email=$_POST['email'];
       $pass=$_POST['pass'];
+      $ac_type="User";
       $check=mysqli_num_rows(mysqli_query($con, "SELECT * FROM user WHERE email='$email'"));
       if($check>0){
         echo '<script>document.getElementById("myalert").innerHTML= "Email id alredy register" </script>';
         mysqli_close($con);
       }
       else{
-        $sql="INSERT INTO user (name, email, password) VALUE ('$name', '$email', '$pass')";
+        $sql="INSERT INTO user (name, email, password, ac_type) VALUE ('$name', '$email', '$pass', '$ac_type')";
         $run=mysqli_query($con, $sql);
+          session_start();
+          $_SESSION['em']=$email;
+          $_SESSION['pa']=$pass;
         echo "<script>window.location.href='dashboard.php' </script>";
       }
     }

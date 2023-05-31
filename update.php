@@ -70,9 +70,7 @@ $state=$row['state'];
         $state=$_POST['state'];
         $city=$_POST['city'];
         $country=$_POST['Country'];
-
         $sql= "UPDATE `address` SET `country`='$country',`name`='$name',`phone`='$phone',`pin`='$pin',`area`='$area',`land`='$land',`city`='$city',`state`='$state' WHERE id=$id";
-
         $run=mysqli_query($c, $sql);
         if($run){
           echo "<script>window.location.href='address.php' </script>";

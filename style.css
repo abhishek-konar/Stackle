@@ -5,7 +5,7 @@ body {
     -o-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -216,12 +216,27 @@ body {
     margin-bottom: 20px;
     color:#2f2f2f;
   }
-  .rounded {
+  .round{
     width: 100px;
   }
 .a-link-normal{
     text-decoration: none;
     color: #007185;
+}
+
+/* For Tabel................................*/
+label {
+  display: inline-block;
+  color: white;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+.dataTables_info{
+  color: #e4e1e1;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+.table.dataTable thead th,table.dataTable thead td,table.dataTable tfoot th,table.dataTable tfoot td {
+  text-align: center;
+  font-family: 'Fira Sans Condensed', sans-serif;
 }
 /* For Mobile Screen................................*/
 @media only screen and (max-width: 768px) {

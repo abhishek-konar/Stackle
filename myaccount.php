@@ -14,7 +14,7 @@
         <div class="col-lg-4 col-sm-6">
 			<a href="#" style="text-decoration: none;">
           <div class="item">
-          <img src="./assets/order.png" class="rounded" alt="img">
+          <img src="./assets/order.png" class="round" alt="img">
             <h6>Your Order</h6>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor Aenean massa.</p>
           </div>
@@ -26,7 +26,7 @@
 	   <div class="col-lg-4 col-sm-6">
 			<a href="address.php" style="text-decoration: none;">
           <div class="item"> 
-          <img src="./assets/location.png" class="rounded" alt="img">
+          <img src="./assets/location.png" class="round" alt="img">
             <h6>Address</h6>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor Aenean massa.</p>
           </div>
@@ -36,7 +36,7 @@
 		 <!--Tab 3-->
 		 <div class="col-lg-4 col-sm-6">
           <div class="item">
-          <img src="./assets/key.png" class="rounded" alt="img">
+          <img src="./assets/key.png" class="round" alt="img">
             <h6>Login & Security</h6>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor Aenean massa.</p>
           </div>

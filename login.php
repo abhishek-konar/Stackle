@@ -21,8 +21,7 @@
     if($con){
       $email=$_POST['email'];
       $pass=$_POST['pass'];
-      $sql="SELECT * FROM user";
-      $run=mysqli_query($con, $sql);
+      $sql="SELECT * FROM user WHERE email='$email'";
       $res=mysqli_query($con, $sql);
       $flag=0;
       while($col=mysqli_fetch_array($res)){
@@ -31,8 +30,16 @@
           $_SESSION['em']=$email;
           $_SESSION['pa']=$pass;
           $flag++;
+          if($col['ac_type']=="User")
+         {
           echo "<script>window.location.href='dashboard.php' </script>";
           $r=$con->querry($sql);
+         }
+         if($col['ac_type']=="Creator")
+         {
+          echo "<script>window.location.href='admin.php' </script>";
+          $r=$con->querry($sql);
+         }
         }
       }
       if($flag==0){
