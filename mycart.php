@@ -9,7 +9,7 @@ $email=$_SESSION['em'];
   <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center border rounded bg-light my-4">
-            <h2>Shopping Cart</h2>
+            <header>Shopping Cart</header>
         </div>
         <div class="col-lg-9">
             <table class="table">
@@ -50,11 +50,15 @@ $email=$_SESSION['em'];
                 <div class="border bg-light rounded p-4 w-100">
                     <h4 class="text-left">Subtotal:</h4>
                     <h5 class="text-right"><?php echo "₹".$total?></h5>
+                    <form>
+                        <button class="btn btn btn-warning btn-block">Proceed to Buy</button>
+                    </form>
                 </div>
             </div>
     </div>
   </div>
 </body>
+
 
 <?php
 $id=$_GET['id'];
