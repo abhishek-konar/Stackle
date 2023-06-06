@@ -3,35 +3,20 @@ error_reporting(0);
 session_start();
 $email=$_SESSION['em'];
 
-if($_SERVER["REQUEST_METHOD"]=="POST")
+// Function for Product Add
+$id=$_GET['id'];
+$c=mysqli_connect('localhost', 'root', '', 'abhishek');
+$query="SELECT * FROM product WHERE id='$id'";
+$run=mysqli_query($c, $query);
+$rsl=mysqli_fetch_assoc($run);
+$product_name=$rsl['name'];
+$image_name=$rsl['image_name'];
+$price=$rsl['price'];
+$qur="INSERT INTO cart (email, item_neme, price, image_name) VALUE ('$email', '$product_name', '$price', '$image_name')";
+if($product_name)
 {
-    if(isset($_POST['Add_To_Cart']))
-    {
-        if(isset($_SESSION['cart']))
-        {   $myitems=array_column($_SESSION['cart'], 'Item_Name');
-            if(in_array($_POST['Item_Name'], $myitems))
-            {
-                echo "<script>alert('Item Alredy Added');
-                            window.location.href='books.php';
-                </script>";
-            }
-            else
-            { 
-                $count=count($_SESSION['cart']);
-                $_SESSION['cart'][$count]=array('Item_name'=>$_POST['Item_name'],'Price'=>$_POST['Price'],'Quantity'=>1);
-                echo "<script>alert('Item Added');
-                    window.location.href='books.php';
-                </script>";
-            }
-        }
-        else
-        {
-            $_SESSION['cart'][0]=array('Item_name'=>$_POST['Item_name'],'Price'=>$_POST['Price'],'Quantity'=>1);
-            print_r($_SESSION['cart']);
-            echo "<script>alert('Item Added');
-                            window.location.href='books.php';
-                </script>";
-        }
-    }
+  $add=mysqli_query($c, $qur);
+  echo "<script>window.location.href='books.php' </script>";
 }
+
 ?>
