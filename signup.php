@@ -1,18 +1,40 @@
 <?php include ('./index.php'); ?>
 
+
 <!--Insert Signup Form-->
-<form  name="register" method="post" action="" onsubmit="return myfunc()">    
-    <div class="box">
-          <p class="large">Sign Up</p>
-          <input class="textbox"  type="text" name="name" placeholder="Name">
-          <input class="textbox" type="text" name="email" placeholder="Email">
-          <input class="textbox"  type="password" name="pass" placeholder="Password">
-          <p style="color:red" id="myalert"></p>
-          <a href="signup.php" style="text-decoration: none;"> <span>Can’t access your account?</span></a>
-          <input type="submit" value="Next" class="submit" name="register">
-    </div>
-  </form>
-  
+<section class="box forms">
+            <div class="form login">
+                <div class="form-content">
+                    <header>Sign up</header>
+                    <form method="post" action="" name="register" onsubmit="return myfunc()"> 
+                        <div class="field input-field">
+                          <input class="textbox" class="input" type="text" name="name" placeholder="Name">
+                        </div>
+                        <div class="field input-field">
+                          <input class="textbox" class="input" type="text" name="email" placeholder="Email">
+                        </div>
+                        <div class="field input-field">
+                          <input class="password" type="password" name="pass" placeholder="Password">
+                        </div>
+                        <div class="field input-field">
+                          <input class="password" type="password" name="con_pass" placeholder="Confirm Password">
+                        </div>
+                        <div class="form-link">
+                            <a href="#" class="forgot-pass">Forgot password?</a>
+                        </div>
+                        <div class="field button-field">
+                            <button name="register">Sign up</button>
+                        </div>
+                    </form>
+                    <div class="form-link">
+                        <span>Don't have an account? <a href="signup.php" class="link signup-link">Signup</a></span>
+                    </div>
+                    <p style="color:red" id="myalert"></p>
+                </div>
+            </div>
+        </section>
+
+
 
 <!--Insert Sign up Details-->
 <?php 
@@ -24,10 +46,16 @@
       $name= $_POST['name'];
       $email=$_POST['email'];
       $pass=$_POST['pass'];
+      $con_pass=$_POST['con_pass'];
       $ac_type="User";
       $check=mysqli_num_rows(mysqli_query($con, "SELECT * FROM user WHERE email='$email'"));
       if($check>0){
         echo '<script>document.getElementById("myalert").innerHTML= "Email id alredy register" </script>';
+        mysqli_close($con);
+      }
+      elseif($con_pass!=$pass)
+      {
+        echo '<script>document.getElementById("myalert").innerHTML= "Paswords does not Match" </script>';
         mysqli_close($con);
       }
       else{

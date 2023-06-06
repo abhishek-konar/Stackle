@@ -29,9 +29,16 @@ if(mysqli_num_rows($res)==0)
     session_destroy();
     header('location:login.php');
 }
+
+//Function to get name
 while($row=mysqli_fetch_assoc($res)){
     $n=$row["name"];
 }
+
+//Function to get cart item numbers
+$sql="SELECT * FROM cart WHERE email='$email'";
+$run=mysqli_query($c, $sql);
+$count_cart_items=mysqli_num_rows($run);
 ?>
 
 <!-------------------Navbar-------------------->
@@ -44,7 +51,7 @@ while($row=mysqli_fetch_assoc($res)){
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="mycart.php"><img class="cart" src="https://img.icons8.com/fluency/48/shopping-cart.png" alt="shopping-cart"/><sup>1</sup></a>
+            <a class="nav-link" href="mycart.php"><img class="cart" src="https://img.icons8.com/fluency/48/shopping-cart.png" alt="shopping-cart"/><sup><?php echo $count_cart_items?></sup></a>
           </li>
           <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -65,7 +72,6 @@ while($row=mysqli_fetch_assoc($res)){
 </nav>
 </body>
 </html>
-
 
 
 

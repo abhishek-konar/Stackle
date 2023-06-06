@@ -1,5 +1,5 @@
-<?php include ('./server.php'); ?>
-  
+<?php include ('./server.php');
+?>
 
 <body>
   <div class="pt-5 pb-5">

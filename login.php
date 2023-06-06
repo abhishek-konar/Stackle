@@ -1,16 +1,34 @@
 <?php include ("./index.php");?>
 
 <body>
-<form method="post" action="" name="register" onsubmit="return myfunc()">       
-    <div class="box">
-          <p class="large">Log in</p>
-          <input class="textbox" type="text" name="email" placeholder="Email">
-          <input class="textbox"  type="password" name="pass" placeholder="Password">
-          <p style="color:red" id="myalert"></p>
-          <a href="signup.php" style="text-decoration: none;"> <span style="color:black;">No account?</span> Create one!</a>
-          <input type="submit" value="Next" class="submit" name="register">
-    </div>
-  </form>
+
+<section class="box forms">
+            <div class="form login">
+                <div class="form-content">
+                    <header>Login</header>
+                    <form method="post" action="" name="register" onsubmit="return myfunc()"> 
+                        <div class="field input-field">
+                        <input class="input" type="text" name="email" placeholder="Email">
+                        </div>
+                        <div class="field input-field">
+                        <input  class="password" type="password" name="pass" placeholder="Password">
+                        </div>
+                        <div class="form-link">
+                            <a href="#" class="forgot-pass">Forgot password?</a>
+                        </div>
+                        <div class="field button-field">
+                            <button name="register">Login</button>
+                        </div>
+                    </form>
+                    <div class="form-link">
+                        <span>Don't have an account? <a href="signup.php" class="link signup-link">Signup</a></span>
+                    </div>
+                    <p style="color:red" id="myalert"></p>
+                </div>
+            </div>
+        </section>
+
+
 
  <!--Login Form-->
   <?php 
@@ -33,12 +51,12 @@
           if($col['ac_type']=="User")
          {
           echo "<script>window.location.href='dashboard.php' </script>";
-          $r=$con->querry($sql);
+          $res=$con->querry($sql);
          }
          if($col['ac_type']=="Creator")
          {
           echo "<script>window.location.href='admin.php' </script>";
-          $r=$con->querry($sql);
+          $res=$con->querry($sql);
          }
         }
       }

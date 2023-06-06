@@ -1,6 +1,8 @@
 <?php 
-session_start();
 error_reporting(0);
+session_start();
+$email=$_SESSION['em'];
+
 if($_SERVER["REQUEST_METHOD"]=="POST")
 {
     if(isset($_POST['Add_To_Cart']))

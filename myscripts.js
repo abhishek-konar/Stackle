@@ -1,4 +1,5 @@
 function myfunction(){
+    var landmark=document.getElementById("landmark").value;
     var Country=document.getElementById("Country").value;
     var mobilenumber= document.getElementById("mobilenumbe").value;
     var pin= document.getElementById("pin").value;
@@ -6,6 +7,7 @@ function myfunction(){
     var area=document.getElementById("area").value;
     var state=document.getElementById("state").value;
     var city=document.getElementById("city").value;
+    
     if(Country==""){
         document.getElementById("myalert").innerHTML="Country/Region";
         return false;
@@ -14,10 +16,7 @@ function myfunction(){
         document.getElementById("myalert").innerHTML="Please enter a name.";
         return false;
     }
-    if(name==""){
-        document.getElementById("myalert").innerHTML="Please enter a name.";
-        return false;
-    }
+   
     if(mobilenumber==""){
         document.getElementById("myalert").innerHTML="Please enter a phone number so we can call if there are any issues with delivery.";
         return false;
@@ -50,6 +49,11 @@ function myfunction(){
         document.getElementById("myalert").innerHTML="Please enter a state, region or province";
         return false;
     }
+    if(landmark==""){
+        document.getElementById("myalert").innerHTML="Please enter landmark.";
+        return false;
+    }
+    
 }
 
 
