@@ -2,21 +2,58 @@
 error_reporting(0);
 session_start();
 $email=$_SESSION['em'];
-
-// Function for Product Add
 $id=$_GET['id'];
 $c=mysqli_connect('localhost', 'root', '', 'abhishek');
+
+// Function for Product Add
 $query="SELECT * FROM product WHERE id='$id'";
 $run=mysqli_query($c, $query);
 $rsl=mysqli_fetch_assoc($run);
 $product_name=$rsl['name'];
 $image_name=$rsl['image_name'];
 $price=$rsl['price'];
-$qur="INSERT INTO cart (email, item_neme, price, image_name) VALUE ('$email', '$product_name', '$price', '$image_name')";
+$product_type=$rsl['product_type'];
+$check=mysqli_num_rows(mysqli_query($c, "SELECT * FROM cart WHERE email='$email' AND id='$id'"));
+if($check>0){
+  if($product_type=='Book')
+  {
+    echo "<script>alert('Alredy added in Yours Cart')</script>";
+    echo "<script>window.location.href='books.php' </script>";
+  }
+  if($product_type=='Mobile')
+  {
+    echo "<script>alert('Alredy added in Yours Cart')</script>";
+    echo "<script>window.location.href='mobile_accessory.php' </script>";
+  }
+}
+else{
+  $qty="1";
+  $qur="INSERT INTO cart (id, email, item_neme, price, image_name, qty) VALUE ('$id', '$email', '$product_name', '$price', '$image_name', '$qty')";
 if($product_name)
 {
   $add=mysqli_query($c, $qur);
-  echo "<script>window.location.href='books.php' </script>";
+
+  if($product_type=='Book')
+  {
+    echo "<script>alert('Added in yours cart')</script>";
+    echo "<script>window.location.href='books.php' </script>";
+  }
+  if($product_type=='Mobile')
+  {
+    echo "<script>alert('Added in yours cart')</script>";
+    echo "<script>window.location.href='mobile_accessory.php' </script>";
+  }
+}
 }
 
+// Function for Delete Product
+$token=$_GET['token'];
+$ql="DELETE FROM cart WHERE email='$email' AND id='$token'";
+$run=mysqli_query($c, $ql);
+if($run){
+    echo "<script>window.location.href='mycart.php' </script>";
+}
+else{
+    echo "Record faild";
+}
 ?>

@@ -1,6 +1,7 @@
 <?php include ('./server.php'); 
 error_reporting(0);
 session_start();
+session_start();
 $email=$_SESSION['em'];
 ?>
 
@@ -33,7 +34,7 @@ $email=$_SESSION['em'];
                         $price=$row['price'];
                         $image_name=$row['image_name'];
                         $qty=$row['qty'];
-                        $total=$total+$price;
+                        
                         echo 
                         "<tr>
                             <td  class='bg-light'>"."<img src='./assets/books/".$image_name."'class='round'>"."</td>
@@ -41,7 +42,7 @@ $email=$_SESSION['em'];
                             <td class='bg-light'>". $price. "<input type='hidden' class='iprice' value='$price'></td>
                             <td class='bg-light'><input class='text-center w-50 iquantity' onchange='subTotal()' type='number' value='$qty' min='1' max='10'></td>
                             <td class='bg-light itotal'></td>
-                            <td class='bg-light'><button class='btn btn-sm btn-outline-danger'>Remove</button></td>
+                            <td class='bg-light'><a href='manage_cart.php?token=$row[id]'><button class='btn btn-sm btn-outline-danger' >Remove</button></a></td>
                         </tr>";
                     }
                     ?>
@@ -51,7 +52,7 @@ $email=$_SESSION['em'];
             <div class="col-lg-3">
                 <div class="border bg-light rounded p-4 w-100">
                     <h4 class="text-left ">Subtotal:</h4>
-                    <h5 class="text-right"><?php echo "₹".$total?></h5>
+                    <h5 class="text-right" id="gtotal"></h5>
                     <form>
                         <button class="btn btn btn-warning btn-block">Proceed to Buy</button>
                     </form>
@@ -61,20 +62,25 @@ $email=$_SESSION['em'];
   </div>
 </body>
 
-<!--Item Price-->
+
 <script>
-    var iprice=document.getElementsByClassName('iprice');
-    var iquantity=document.getElementsByClassName('iquantity');
-    var itotal=document.getElementsByClassName('itotal');
-    function subTotal()
+// Function of Price calculation
+var gt=0;
+var iprice=document.getElementsByClassName('iprice');
+var iquantity=document.getElementsByClassName('iquantity');
+var itotal=document.getElementsByClassName('itotal');
+var gtotal=document.getElementById('gtotal');
+function subTotal()
+{
+    gt=0;
+     for(i=0;i<iprice.length;i++)
     {
-        for(i=0;i<iprice.length;i++)
-        {
-            itotal[i].innerText=(iprice[i].value)*(iquantity[i].value);
-        }
+        itotal[i].innerText=(iprice[i].value)*(iquantity[i].value);
+        gt=gt+(iprice[i].value)*(iquantity[i].value)
+    }
+        
+        gtotal.innerText='₹'+ gt;
     }
     subTotal();
+    
 </script>
-
-
-?>

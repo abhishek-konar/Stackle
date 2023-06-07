@@ -1,3 +1,4 @@
+// Function of Address add
 function myfunction(){
     var landmark=document.getElementById("landmark").value;
     var Country=document.getElementById("Country").value;
@@ -55,5 +56,4 @@ function myfunction(){
     }
     
 }
-
 

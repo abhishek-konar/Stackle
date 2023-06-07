@@ -26,7 +26,7 @@
                         <select class="selectpicker" name="product_type"  Class="select">
                             <option value="">Select Yours Product Type</option>
                             <option value="Book">Book</option>
-                            <option value="Music">Music</option>
+                            <option value="Mobile">Mobile & Accessory</option>
                       </select>
                         </div>
                        
@@ -55,12 +55,8 @@
     $file_name=$_FILES['file']['name'];
     $fileExtension=substr(strrchr($file_name, '.'),1);
     //File Type Test
-    if($fileExtension=='png')
-    {
-        echo '<script>document.getElementById("myalert").innerHTML= "Please upload jpg file" </script>';
-        mysqli_close($con);
-    }
-    elseif($name=="" || $price=="" || $quentity=="" || $file_name=="")
+    
+    if($name=="" || $price=="" || $quentity=="" || $file_name=="")
     {
       echo '<script>document.getElementById("myalert").innerHTML= "Fill proper data" </script>';
         mysqli_close($con);

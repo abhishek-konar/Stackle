@@ -2,6 +2,8 @@
 error_reporting(0);
 session_start(); 
 ?>
+
+
 <div class="pt-5 pb-5">
     <div class="container">
       <div class="row">
@@ -11,7 +13,7 @@ session_start();
         session_start();
         $email=$_SESSION['em'];
         $c=mysqli_connect('localhost', 'root', '', 'abhishek');
-        $q="SELECT * FROM product WHERE product_type='Book'";
+        $q="SELECT * FROM product WHERE product_type='Mobile'";
         $res=mysqli_query($c, $q);
         while($row=mysqli_fetch_assoc($res)){
           $name=$row['name'];
@@ -29,7 +31,7 @@ session_start();
             "<p> Price: ".$price."</p>".
             "<p> Phone Number: ".$phone."</p>".
            "<a href='manage_cart.php?id=$row[id]' class='btn btn-warning mr-2'>Add to cart</a>".
-           "<a href='view.php' class='btn btn btn-info'>View More</a>".
+           "<a href='#' class='btn btn btn-info'>View More</a>".
             "</div>
         </div>";       
 }

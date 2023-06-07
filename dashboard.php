@@ -41,11 +41,13 @@
 
          <!--Tab 4-->
         <div class="col-lg-4 col-sm-6">
+        <a href="mobile_accessory.php" style="text-decoration: none;">
           <div class="item"> 
             <img src="./assets/mobile.png" class="round" alt="img">
             <h6>Mobile & Accessory</h6>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor Aenean massa.</p>
           </div>
+          </a>
         </div>
 
         <!--Tab 5-->
