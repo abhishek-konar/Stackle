@@ -19,7 +19,6 @@ include ('./connection.php')?>
 		    </a>
         </div>
 
-	
 <!--All address Details-->
 <?php
   error_reporting(0);
