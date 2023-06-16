@@ -75,11 +75,6 @@
         </section>
 
 
-
-
-  
-
-
 <!--Insert Address-->
 <?php 
 
