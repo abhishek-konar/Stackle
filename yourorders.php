@@ -7,7 +7,7 @@ $email=$_SESSION['em'];
 
 ?>
 
-<div class="container p-2">
+<div class="container">
     <div class="card-header bg-light">
         Your Orders
     </div>

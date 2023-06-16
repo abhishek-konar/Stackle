@@ -15,7 +15,7 @@ $price=$rsl['price'];
 $rating=$rsl['rating'];
 ?>
 
-<div class="mb-4 mt-6 container">
+<<div class="container p-4">
     <div class="jumbotron">
         <div class="row">
             <div class="mb-4 col-xl-2 col-lg-3 col-md-4 col-sm-12 col-12">
@@ -69,11 +69,8 @@ $rating=$rsl['rating'];
                           }
                         
                         ?>
-
                 <h4 class="text-danger mt-1"><?php echo '₹'. $price?></h4>
-            
                 </div>
-                
             </div>
             <div class="col-xl-10 col-lg-9 col-md-8 col-sm-12 col-12">
                 <p class="display-6 text-capitalize"><?php echo $product_name?></p>
@@ -82,6 +79,8 @@ $rating=$rsl['rating'];
             </div>
         </div>
     </div>
+
+<!--Display Smilar product-->
     <p class="lead text-center text-white mb-4">Similler Books</p>
     <div class="row">
       <?php
@@ -98,7 +97,6 @@ $rating=$rsl['rating'];
           "<div class='item'>".
               "<img src='./assets/books/".$image_name."'class='round'>".
               "<h6>". $name. "</h6>".
-              "<p>".$s_description."</p>".
               "<p> Price: ".$price."</p>".
               "<a href='manage_cart.php?id=$row[id]' class='btn btn-warning mr-2'>Add to cart</a>".
               "<a href='view.php?id=$row[id]' class='btn btn btn-info'>View More</a>".

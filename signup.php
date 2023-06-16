@@ -28,7 +28,7 @@ include ('./connection.php')
                         </div>
                     </form>
                     <div class="form-link">
-                        <span>Don't have an account? <a href="signup.php" class="link signup-link">Signup</a></span>
+                        <span>Existing User? <a href="signup.php" class="link signup-link">login</a></span>
                     </div>
                     <p style="color:red" id="myalert"></p>
                 </div>

@@ -43,12 +43,12 @@ if($total_price>900)
 }
 ?>
 
-<div class="container p-2">
+<div class="container p-4">
     <div class="card-header bg-light">
         DELEVERY ADDRESS
     </div>
     <div class="row">
-        <div class="col-sm-9 pt-2">
+        <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12 pt-2">
         <form method="post" action="" name="register">
             <?php
                     $q="SELECT * FROM address WHERE email='$email'";
@@ -65,12 +65,20 @@ if($total_price>900)
                     $phone=$row['phone'];
                     $id=$row['id'];
                     $address=$name;
+                    if($row['address_type']=='Defult')
+                    {
+                         $checked='Checked';
+                    }
+                    else
+                    {
+                        $checked='';
+                    }
                     $address=$area. ','. $city. ',' .$state. ',' .$pin. ',Mobile Number: '. $phone. ',Landmark: '. $land ;
                     echo 
                     " 
                     <div class='card border rounded-0'>
                         <div class='card-body pt-1'>
-                            <input type='radio' name='idd' value='$id'>
+                            <input type='radio' name='idd' value='$id' $checked>
                             <label><h5 class='card-title'>".$name."</h5></label>
                             <p class='card-text'>". $address."</p>
                         </div>
@@ -78,9 +86,9 @@ if($total_price>900)
 }
             ?>
         </div>
-            <div class="col-sm-3 pt-2">
+            <div class="mb-4 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12 pt-2">
                 <div class="card">
-                    <div class="card-body">
+                <div class="card-body">
                     <table class="table table-borderless">
                         <thead class="text-left">
                             <tr>

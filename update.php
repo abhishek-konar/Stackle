@@ -1,36 +1,48 @@
-<?php include ('./server.php'); ?>
+<?php include ('./server.php');
+$id=$_GET['id'];
+$c=mysqli_connect('localhost', 'root', '', 'abhishek');
+$q="SELECT * FROM address WHERE id='$id'";
+$r=mysqli_query($c, $q);
+$row=mysqli_fetch_assoc($r);
+$name=$row['name'];
+$phone=$row['phone'];
+$pin=$row['pin'];
+$area=$row['area'];
+$city=$row['city'];
+$landmark=$row['land'];
+$state=$row['state'];
+?>
 
-<!--Address Form-->
+
 <section class="box forms">
             <div class="form login">
                 <div class="form-content">
                     <header>Edit your address</header>
-                    <form name="insert" method="post" action="" onsubmit="return myfunction()"> 
+                    <form name="update" method="post" action="" > 
                         <div class="field input-field">
-                        <input class="form-control" type="text" id="name" name="name"  placeholder="Full name (First and Last name)" maxlength="50">
+                        <input class="input" type="text" name="name" value="<?php echo $name ?>"  placeholder="Full name (First and Last name)" maxlength="50">
+                        </div>
+                        <div class="field input-field">
+                        <input  class="input" type="text"  name="phone" value="<?php echo $phone ?>" placeholder="Mobile number" maxlength="10">
+                        </div>
+
+                        <div class="field input-field">
+                        <input  class="input" type="pin"  name="pin" value="<?php echo $pin ?>" placeholder="Pin" maxlength="9">
+                        </div>
+
+                        <div class="field input-field">
+                        <input  class="input" type="text"  name="area" value="<?php echo $area ?>" placeholder="Area, Street, Sector, Village">
                         </div>
                         
                         <div class="field input-field">
-                        <input  class="form-control" type="text" id="area" name="area"  placeholder="Area, Street, Sector, Village">
-                        </div>
-
-                        <div class="input-group mb-3 field input-field">
-                          <input  class="form-control mr-1" type="text" id="mobilenumbe" name="phone" placeholder="Mobile number" maxlength="10">
-                          <input  class="form-control" type="pin" id="pin"  name="pin"  placeholder="Pin" maxlength="9">
-                        </div>
-
-
-                        <div class="field input-field">
-                          <input  class="form-control"  type="text" id="city"   name="city"  placeholder="Town/City" maxlength="40">
+                        <input  class="input" type="text"  name="city" value="<?php echo $city ?>" placeholder="Town/City" maxlength="40">
                         </div>
 
                         <div class="field input-field">
-                        <input  class="form-control" type="text" id="landmark" name="landmark" placeholder="Landmark (E.g. near Stackle House)" maxlength="50">
+                        <input  class="input" type="text" name="land"  value="<?php echo $landmark ?>" placeholder="Landmark (E.g. near Stackle House)" maxlength="50">
                         </div>
-
-
                         <div class="field button-field">
-                        <select class="selectpicker" id="state" name="state"  Class="select form-control">
+                        <select class="selectpicker" name="state"  Class="select">
                             <option value="">Select Yours State Name</option>
                             <option value="Andhra Pradesh">Andhra Pradesh</option>
                             <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -59,7 +71,7 @@
                         </div>
                           
                         <div class="field button-field">
-                            <button name="insert">Save changes</button>
+                            <button name="update">Save changes</button>
                         </div>
                     </form>
         
@@ -69,40 +81,23 @@
         </section>
 
 
-<!--Insert Address-->
 <?php 
 
-    error_reporting(0);
-    session_start();
-    $email=$_SESSION['em'];
-
-    if(isset ($_POST['insert'])){
+    if (isset($_POST['update'])){
         $name= $_POST['name'];
         $phone=$_POST['phone'];
         $pin=$_POST['pin'];
         $area=$_POST['area'];
-        $land=$_POST['landmark'];
+        $land=$_POST['land'];
         $state=$_POST['state'];
         $city=$_POST['city'];
-        $Country="India";
-        $con=mysqli_connect('localhost', 'root', '', 'abhishek');
-        $check=mysqli_num_rows(mysqli_query($con, "SELECT * FROM address WHERE email='$email'"));
-      if($check=="0")
-      {
-        $address_type="Defult";
-        $sql="INSERT INTO address (email, Country, name, phone, pin, area, land, city, state, address_type) VALUE ('$email', '$Country', '$name', '$phone', '$pin', '$area', '$land', '$city', '$state', '$address_type')";
-        $run=mysqli_query($con, $sql);
-        echo "<script>window.location.href='address.php' </script>";
-      }
-      else
-      {
-        $address_type="No";
-        $sql="INSERT INTO address (email, Country, name, phone, pin, area, land, city, state, address_type) VALUE ('$email', '$Country', '$name', '$phone', '$pin', '$area', '$land', '$city', '$state', '$address_type')";
-        $run=mysqli_query($con, $sql);
-        echo "<script>window.location.href='address.php' </script>";
-      }
-
+        $country="India";
+        $sql= "UPDATE `address` SET `country`='$country',`name`='$name',`phone`='$phone',`pin`='$pin',`area`='$area',`land`='$land',`city`='$city',`state`='$state' WHERE id=$id";
+        $run=mysqli_query($c, $sql);
+        if($run){
+          echo "<script>window.location.href='address.php' </script>";
+        }
+        
     }
-
     
   ?>

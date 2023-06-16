@@ -5,30 +5,15 @@
                     <header>Add Your Product</header>
                     <form method="post" name="insert" enctype="multipart/form-data"> 
                         <div class="field input-field">
-                          <input class="input" type="text" name="name" placeholder="Product Name" maxlength="50">
+                          <input class="input" type="text" name="name" placeholder="Product Name" maxlength="60">
                         </div>
                         <div class="field input-field pt-1">
                           <input  class="password" type="number" name="price" placeholder="Price" maxlength="100">
                         </div>
-
-
                         <div class="field input-field pt-1">
-                        <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here"  name="s_description"></textarea>
-                            <label for="floatingTextarea">Short Description</label>
-                        </div>
-                        </div>
-
-
-
-                        <div class="field input-field pt-3">
-                          <div class="form-floating">
                             <textarea class="form-control" placeholder="Leave a comment here"  name="description"></textarea>
-                            <label for="floatingTextarea">Description</label>
-                          </div>
                         </div>
-                        
-                          <div class="pt-5">
+                          <div class="mt-5">
                             <input class="form-control" type="file" id="formFile" name="file">
                           </div>
                           <div class="field button-field pt-1">
@@ -36,9 +21,8 @@
                             <option value="">Select Yours Product Type</option>
                             <option value="Book">Book</option>
                             <option value="Mobile">Mobile & Accessory</option>
-                      </select>
+                        </select>
                         </div>
-                       
                         <div class="field button-field">
                             <button name="insert">Add Product</button>
                         </div>
@@ -58,14 +42,13 @@
     //Function to get All data from Input
     $name= $_POST['name'];
     $price=$_POST['price'];
-    $s_description=$_POST['s_description'];
     $description=$_POST['description'];
     $product_type=$_POST['product_type'];
     $file_name=$_FILES['file']['name'];
     $fileExtension=substr(strrchr($file_name, '.'),1);
     //File Type Test
     
-    if($name=="" || $price=="" || $s_description=="" || $file_name=="" || $description=="" )
+    if($name=="" || $price=="" || $file_name=="" || $description=="" )
     {
       echo '<script>document.getElementById("myalert").innerHTML= "Fill proper data" </script>';
         mysqli_close($con);
@@ -80,7 +63,7 @@
       move_uploaded_file($tmp_name,"./assets/books/". $re_name);
 
     //Create Connection and Store Data in the Database
-      $sql="INSERT INTO product (categories_id, name, price,  image_name, s_description, description, product_type) VALUE ('$random_number', '$name', '$price',  '$re_name', '$s_description', '$description', '$product_type')";
+      $sql="INSERT INTO product (categories_id, name, price,  image_name, description, product_type) VALUE ('$random_number', '$name', '$price',  '$re_name', '$description', '$product_type')";
       $run=mysqli_query($con, $sql);
       echo "<script>window.location.href='admin.php' </script>";
     }

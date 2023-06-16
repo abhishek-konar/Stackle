@@ -2,6 +2,9 @@
 error_reporting(0);
 session_start();
 $email=$_SESSION['em'];
+$c=mysqli_connect('localhost', 'root', '', 'abhishek');
+$q="SELECT * FROM cart WHERE email='$email'";
+$res=mysqli_query($c, $q);
 ?>
 
 <body>
@@ -24,16 +27,13 @@ $email=$_SESSION['em'];
             </thead>
             <tbody class="text-center">
                 <?php
-                    $c=mysqli_connect('localhost', 'root', '', 'abhishek');
-                    $q="SELECT * FROM cart WHERE email='$email'";
-                    $res=mysqli_query($c, $q);
+                    
                     while($row=mysqli_fetch_assoc($res))
                     {
                         $item_nem=$row['item_neme'];
                         $price=$row['price'];
                         $image_name=$row['image_name'];
                         $qty=$row['qty'];
-                        
                         echo 
                         "<tr>
                             <td  class='bg-light'>"."<img src='./assets/books/".$image_name."'class='round'>"."</td>
@@ -48,16 +48,28 @@ $email=$_SESSION['em'];
             </tbody>
            </table>
         </div>
-            <div class="col-lg-3">
-                <div class="border bg-light rounded p-4 w-100">
-                    <h4 class="text-left ">Subtotal:</h4>
-                    <h5 class="text-right" id="gtotal"></h5>
-                    <form method="post" action="" name="register">
-                        <input type="hidden" name="total" id="total">
-                        <td class='bg-light'><button class='btn btn btn-warning btn-block' name="register">Proceed to Buy</button></td>
-                    </form>
-                </div>
-        </div>
+        <?php  
+        if($qty==0)
+        {
+            echo 
+                "echo <script>window.location.href='empty_cart.php' </script>";
+        }
+        else
+        {
+            echo 
+                "<div class='col-lg-3'>
+                    <div class='border bg-light rounded p-4 w-100'>
+                        <h4 class='text-left'>Subtotal:</h4>
+                        <h5 class='text-right'id='gtotal'></h5>
+                        <form method='post' action='' name='register'>
+                            <input type='hidden' name='total' id='total'>
+                            <td class='bg-light'><button class='btn btn btn-warning btn-block' name='register'>Proceed to Buy</button></td>
+                        </form>
+                    </div>
+                </div>";
+        }  
+        ?>
+      
     </div>
   </div>
 </body>

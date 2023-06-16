@@ -1,22 +1,22 @@
-<?php include ("./admin.php");?>
+<?php include ("./admin.php");
+include ('./connection.php');?>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 
-<div class="p-5" >
+<div class="container p-4">
     <table id="example" class="table table-striped bg-light " style="width:100%">
-        <thead>
+        <thead >
             <tr>
                 <th>Name</th>
                 <th>User Id</th>
                 <th>Account Type</th>
             </tr>
         </thead>
-        <tbody class="text-center">
+        <tbody>
             <?php
-                $c=mysqli_connect('localhost', 'root', '', 'abhishek');
                 $q="SELECT * FROM user WHERE ac_type='User' OR ac_type='Seller'";
-                $res=mysqli_query($c, $q);
+                $res=mysqli_query($connect, $q);
                 while($row=mysqli_fetch_assoc($res))
                 {
                     $name=$row['name'];

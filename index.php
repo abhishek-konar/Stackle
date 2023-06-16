@@ -10,8 +10,9 @@
     <meta name="description" content="Lenstack"/>
         <meta name="next-head-count" content="6"/>
     <title>Document</title>
-    <link rel="stylesheet"  href="global.css"/>
-    <link rel="stylesheet"  href="navbar.css"/>
+    <link rel="stylesheet"  href="./style/global.css"/>
+    <link rel="stylesheet"  href="./style/navbar.css"/>
+    <link rel="stylesheet"  href="./style/form.css"/>
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
@@ -30,30 +31,24 @@
 
 </head>
 <body>
-
 <!-------------------Navbar-------------------->
-<nav class="header">
-                <nav class="navbar-unauthorized navbar navbar-expand-lg navbar-light fixed-top">
-                    <div class="container">
-                        <a href="./">
-                            <span style="font-size:1.3rem" class="navbar-brand">Stackle</span>
-                        </a>
-                        <button type="button" aria-label="Toggle navigation" class="navbar-toggler collapsed">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="navbar-collapse collapse">
-                            <div class="ms-auto navbar-nav">
-                                <a href="signup.php">
-                                    <span class="navbar-brand">Get Started</span>
-                                </a>
-                                <a href="login.php">
-                                    <span class="navbar-brand">Login</span>
-                                </a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </nav>
-</body>
-</html>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="./">Stackle</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="yourorders.php">Get Started</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login.php">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+

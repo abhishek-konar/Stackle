@@ -1,5 +1,6 @@
 
   /* For Card Desigine...............................*/
+
   span{
     display: inline-block;
     text-decoration: none;
@@ -146,9 +147,14 @@ header {
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
 }
+
 @media only screen and (max-width: 768px) {
   .entertainmentContainer
   {
     text-align: center;
   }
+  .text-success
+{
+  padding: auto;
+}
 }
