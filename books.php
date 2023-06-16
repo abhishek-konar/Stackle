@@ -22,43 +22,43 @@ session_start();
           $rating=$row['rating'];
           if($rating=="1")
           {
-            $r="<img src='./assets/star.png'class='r'>
-            <img src='./assets/star_n.png'class='r'>
-            <img src='./assets/star_n.png'class='r'>
-            <img src='./assets/star_n.png'class='r'>
-            <img src='./assets/star_n.png'class='r'>";
+            $r="<img src='./assets/star.png'class='rating'>
+            <img src='./assets/star_n.png'class='rating'>
+            <img src='./assets/star_n.png'class='rating'>
+            <img src='./assets/star_n.png'class='rating'>
+            <img src='./assets/star_n.png'class='rating'>";
           }
           if($rating=="2")
           {
-            $r="<img src='./assets/star.png'class='r'>
-                <img src='./assets/star.png'class='r'>
-                <img src='./assets/star_n.png'class='r'>
-                <img src='./assets/star_n.png'class='r'>
-                <img src='./assets/star_n.png'class='r'>";
+            $r="<img src='./assets/star.png'class='rating'>
+                <img src='./assets/star.png'class='rating'>
+                <img src='./assets/star_n.png'class='rating'>
+                <img src='./assets/star_n.png'class='rating'>
+                <img src='./assets/star_n.png'class='rating'>";
           }
           if($rating=="3")
           {
-            $r="<img src='./assets/star.png'class='r'>
-                <img src='./assets/star.png'class='r'>
-                <img src='./assets/star.png'class='r'>
-                <img src='./assets/star_n.png'class='r'>
-                <img src='./assets/star_n.png'class='r'>";
+            $r="<img src='./assets/star.png'class='rating'>
+                <img src='./assets/star.png'class='rating'>
+                <img src='./assets/star.png'class='rating'>
+                <img src='./assets/star_n.png'class='rating'>
+                <img src='./assets/star_n.png'class='rating'>";
           }
           if($rating=="4")
           {
-            $r="<img src='./assets/star.png'class='r'>
-                <img src='./assets/star.png'class='r'>
-                <img src='./assets/star.png'class='r'>
-                <img src='./assets/star.png'class='r'>
-                <img src='./assets/star_n.png'class='r'>";
+            $r="<img src='./assets/star.png'class='rating'>
+                <img src='./assets/star.png'class='rating'>
+                <img src='./assets/star.png'class='rating'>
+                <img src='./assets/star.png'class='rating'>
+                <img src='./assets/star_n.png'class='rating'>";
           }
           if($rating=="5")
           {
-            $r="<img src='./assets/star.png'class='r'>
-                <img src='./assets/star.png'class='r'>
-                <img src='./assets/star.png'class='r'>
-                <img src='./assets/star.png'class='r'>
-                <img src='./assets/star.png'class='r'>";
+            $r="<img src='./assets/star.png'class='rating'>
+                <img src='./assets/star.png'class='rating'>
+                <img src='./assets/star.png'class='rating'>
+                <img src='./assets/star.png'class='rating'>
+                <img src='./assets/star.png'class='rating'>";
           }
 
         echo 

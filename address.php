@@ -22,37 +22,37 @@ include ('./connection.php')?>
 	
 <!--All address Details-->
 <?php
-        error_reporting(0);
-        session_start();
-        $email=$_SESSION['em'];
-        $q="SELECT * FROM address WHERE email='$email'";
-        $res=mysqli_query($connect, $q);
-        while($row=mysqli_fetch_assoc($res)){
-        $name=$row['name'];
-        $phone=$row['phone'];
-        $country=$row['country'];
-        $pin=$row['pin'];
-        $area=$row['area'];
-        $city=$row['city'];
-        $land=$row['land'];
-        $state=$row['state'];
-        $phone=$row['phone'];
-        echo 
-        "<div class='col-lg-4 col-sm-6'>".
-          "<div class='item'>".
-            "<h6>". $name. "</h6>".
-            "<p>".$area. ", </p>".
-            "<p>".$city. ", ". $state. " " .$pin."</p>".
-            "<p> Landmar: ".$land."</p>".
-            "<p>".$country."</p>".
-            "<p> Phone Number: ".$phone."</p>".
-            "<a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='update.php?id=$row[id]'>Edit</a>
-            &nbsp; | &nbsp;".
-            "<a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='delete.php?id=$row[id]'> Remove</a>
-            &nbsp; | &nbsp;
-            <a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='#'>Set as Defult</a>
-          </div>
-        </div>";       
+  error_reporting(0);
+  session_start();
+  $email=$_SESSION['em'];
+  $q="SELECT * FROM address WHERE email='$email'";
+  $res=mysqli_query($connect, $q);
+  while($row=mysqli_fetch_assoc($res)){
+    $name=$row['name'];
+    $phone=$row['phone'];
+    $country=$row['country'];
+    $pin=$row['pin'];
+    $area=$row['area'];
+    $city=$row['city'];
+    $land=$row['land'];
+    $state=$row['state'];
+    $phone=$row['phone'];
+    echo 
+      "<div class='col-lg-4 col-sm-6'>".
+        "<div class='item'>".
+          "<h6>". $name. "</h6>".
+          "<p>".$area. ", </p>".
+          "<p>".$city. ", ". $state. " " .$pin."</p>".
+          "<p> Landmar: ".$land."</p>".
+          "<p>".$country."</p>".
+          "<p> Phone Number: ".$phone."</p>".
+          "<a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='update.php?id=$row[id]'>Edit</a>
+          &nbsp; | &nbsp;".
+          "<a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='delete.php?id=$row[id]'> Remove</a>
+          &nbsp; | &nbsp;
+          <a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='#'>Set as Defult</a>
+        </div>
+      </div>";       
 }
 ?>
       </div>
