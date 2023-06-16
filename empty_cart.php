@@ -110,7 +110,6 @@ if($total_price>900)
                                 <td class="text-danger bold"><?php echo '₹'. $total_amount;?></td>
                             </tr>
                         </tbody>
-
                     </table>
                 </div>
             </div>

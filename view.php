@@ -95,7 +95,7 @@ $rating=$rsl['rating'];
         echo 
         "<div class='col-lg-4 col-sm-6'>".
           "<div class='item'>".
-              "<img src='./assets/books/".$image_name."'class='round'>".
+              "<img src='./assets/books/".$image_name."' class='round'>".
               "<h6>". $name. "</h6>".
               "<p> Price: ".$price."</p>".
               "<a href='manage_cart.php?id=$row[id]' class='btn btn-warning mr-2'>Add to cart</a>".

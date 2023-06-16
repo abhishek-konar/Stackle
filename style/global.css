@@ -7,7 +7,7 @@ html {
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
     -webkit-font-smoothing: antialiased;
-    font-family: 'Thasadith', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     -moz-osx-font-smoothing: grayscale;
     scrollbar-width: none;
 }
@@ -47,20 +47,11 @@ body {
 ::-webkit-scrollbar{
     width: 0px;
 }
-/* Cart and Logo.......................................*/
+/* Cart's Logo and Empty Cart.......................................*/
 .cart {
     width: 25px;
 }
-.r{
-    width: 15px;
-}
 
-.ac-orange {
-    color: #F69931;
-}
-.ac-orange {
-    color: #F69931;
-}
 .ac-badge-text-secondary {
     line-height: 22px;
     margin-right: 8px;
@@ -99,6 +90,5 @@ body {
       background-repeat: no-repeat;
       background-position: 50%;
       background-size: 100%;
-
 }
 }
