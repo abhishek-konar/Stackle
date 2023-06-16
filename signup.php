@@ -18,7 +18,7 @@ include ('./connection.php')
                           <input class="password" type="password" name="pass" placeholder="Password">
                         </div>
                         <div class="field input-field">
-                          <input class="password" type="password" name="con_pass" placeholder="Confirm Password">
+                          <input class="password" type="password" name="conpass" placeholder="Confirm Password">
                         </div>
                         <div class="form-link">
                             <a href="#" class="forgot-pass">Forgot password?</a>
@@ -43,14 +43,14 @@ include ('./connection.php')
       $name= $_POST['name'];
       $email=$_POST['email'];
       $pass=$_POST['pass'];
-      $con_pass=$_POST['con_pass'];
+      $con_pass=$_POST['conpass'];
       $ac_type="User";
       $check=mysqli_num_rows(mysqli_query($connect, "SELECT * FROM user WHERE email='$email'"));
       if($check>0){
         echo '<script>document.getElementById("myalert").innerHTML= "Email id alredy register" </script>';
         mysqli_close($connect);
       }
-      elseif($con_pass!=$pass)
+      elseif($conpass!=$pass)
       {
         echo '<script>document.getElementById("myalert").innerHTML= "Paswords does not Match" </script>';
         mysqli_close($connect);
