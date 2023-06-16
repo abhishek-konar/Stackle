@@ -9,10 +9,9 @@
     <link rel="stylesheet"  href="./style/card.css"/>
     <link rel="stylesheet"  href="./style/form.css"/>
     <link rel="stylesheet"  href="./style/navbar.css"/>
-
+    <link rel="stylesheet"  href="./style/media.css"/>
      <!-- Script-->
     <script src="myscripts.js"></script>
-   
      <!-- Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">

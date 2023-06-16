@@ -1,0 +1,28 @@
+/* Mobile Responsive......................................*/
+@media only screen and (max-width: 768px) {
+    .content {
+        padding-top: 0vh;
+        text-align: center;
+        padding-left: 0%;
+    }
+
+
+    .big{
+        text-align:center;
+        font-size:270%;
+    }
+
+    .medium{
+        text-align:center;
+        font-size:190%;
+    }
+    .navbar-toggler-icon{
+      display: inline-block;
+      width: 1.5em;
+      height: 1.5em;
+      vertical-align: middle;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 100%;
+}
+}

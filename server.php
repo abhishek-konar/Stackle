@@ -10,6 +10,7 @@
     <link rel="stylesheet"  href="./style/card.css"/>
     <link rel="stylesheet"  href="./style/form.css"/>
     <link rel="stylesheet"  href="./style/navbar.css"/>
+    <link rel="stylesheet"  href="./style/media.css"/>
      <!--For Script-->
     <script src="myscripts.js"></script>
      <!--For Bootstrap and ajax-->
