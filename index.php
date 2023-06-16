@@ -8,12 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
     <meta name="description" content="Lenstack"/>
-        <meta name="next-head-count" content="6"/>
+    <meta name="next-head-count" content="6"/>
     <title>Document</title>
+    <!--For Stylesheet-->
     <link rel="stylesheet"  href="./style/global.css"/>
     <link rel="stylesheet"  href="./style/navbar.css"/>
     <link rel="stylesheet"  href="./style/form.css"/>
+    <!--For Script-->
     <script src="script.js"></script>
+    <!--For Font Style-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
