@@ -1,7 +1,6 @@
 <?php include ('./server.php'); 
 error_reporting(0);
 session_start();
-session_start();
 $email=$_SESSION['em'];
 ?>
 
@@ -12,7 +11,7 @@ $email=$_SESSION['em'];
             <header>Shopping Cart</header>
         </div>
         <div class="col-lg-9">
-            <table class="table">
+        <table class="table">
             <thead class="text-center">
                 <tr>
                     <th scope="col"  class="bg-light"></th>
@@ -53,15 +52,15 @@ $email=$_SESSION['em'];
                 <div class="border bg-light rounded p-4 w-100">
                     <h4 class="text-left ">Subtotal:</h4>
                     <h5 class="text-right" id="gtotal"></h5>
-                    <form>
-                        <button class="btn btn btn-warning btn-block">Proceed to Buy</button>
+                    <form method="post" action="" name="register">
+                        <input type="hidden" name="total" id="total">
+                        <td class='bg-light'><button class='btn btn btn-warning btn-block' name="register">Proceed to Buy</button></td>
                     </form>
                 </div>
-            </div>
+        </div>
     </div>
   </div>
 </body>
-
 
 <script>
 // Function of Price calculation
@@ -78,9 +77,21 @@ function subTotal()
         itotal[i].innerText=(iprice[i].value)*(iquantity[i].value);
         gt=gt+(iprice[i].value)*(iquantity[i].value)
     }
-        
         gtotal.innerText='₹'+ gt;
+        document.getElementById("total").value =gt;
     }
     subTotal();
     
 </script>
+
+<!--Function for Store data In Session-->
+<?php 
+if(isset ($_POST['register']))
+{
+    $total=$_POST['total'];
+    session_start();
+    $_SESSION['total']=$total;
+    echo "<script>window.location.href='orderview.php' </script>";
+    
+}
+?>

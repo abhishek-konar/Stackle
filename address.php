@@ -1,4 +1,5 @@
-<?php include ('./server.php'); ?>
+<?php include ('./server.php'); 
+include ('./connection.php')?>
 
 
 <div class="pt-5 pb-5">
@@ -24,9 +25,8 @@
         error_reporting(0);
         session_start();
         $email=$_SESSION['em'];
-        $c=mysqli_connect('localhost', 'root', '', 'abhishek');
         $q="SELECT * FROM address WHERE email='$email'";
-        $res=mysqli_query($c, $q);
+        $res=mysqli_query($connect, $q);
         while($row=mysqli_fetch_assoc($res)){
         $name=$row['name'];
         $phone=$row['phone'];

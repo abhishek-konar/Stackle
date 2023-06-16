@@ -1,0 +1,49 @@
+
+body,
+html {
+    height: 100%;
+    margin: 0;   
+    font-weight: lighter;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Thasadith', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    scrollbar-width: none;
+}
+::-webkit-scrollbar
+{
+    width: 0;
+}
+    
+body {
+    background: linear-gradient(
+        rgba(26, 26, 28, 0.6), 
+        rgba(26, 26, 28, 0.6)),
+        url(./assets/hero.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.9;
+    animation: transitionIn 1.00s;
+}
+/* Cart and Logo.......................................*/
+.cart {
+    width: 25px;
+}
+.r{
+    width: 15px;
+}
+
+.ac-orange {
+    color: #F69931;
+}
+.ac-orange {
+    color: #F69931;
+}
+.ac-badge-text-secondary {
+    line-height: 22px;
+    margin-right: 8px;
+    font-family: "Amazon Ember",Arial!important;
+}

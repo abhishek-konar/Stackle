@@ -1,0 +1,27 @@
+/*Navbar*/
+
+
+.navbar
+{
+  background: #ffffff;
+  z-index: 2;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+    
+.navbar-brand, .nav-link
+{
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  color: #1c2b33;
+  text-decoration: none;
+}
+    
+.navbar-toggler:focus, 
+.navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}

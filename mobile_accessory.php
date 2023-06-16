@@ -31,7 +31,7 @@ session_start();
             "<p> Price: ".$price."</p>".
             "<p> Phone Number: ".$phone."</p>".
            "<a href='manage_cart.php?id=$row[id]' class='btn btn-warning mr-2'>Add to cart</a>".
-           "<a href='#' class='btn btn btn-info'>View More</a>".
+           "<a href='view.php?id=$row[id]' class='btn btn btn-info'>View More</a>".
             "</div>
         </div>";       
 }

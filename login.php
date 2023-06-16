@@ -1,7 +1,8 @@
-<?php include ("./index.php");?>
+<?php include ("./index.php");
+include ('./connection.php');
+?>
 
 <body>
-
 <section class="box forms">
             <div class="form login">
                 <div class="form-content">
@@ -29,18 +30,14 @@
         </section>
 
 
-
  <!--Login Form-->
   <?php 
     error_reporting (0);
-    if (isset ($_POST['register'])){
-      $con=mysqli_connect('localhost', 'root', '', 'abhishek');
-    }
-    if($con){
+    if(isset ($_POST['register'])){
       $email=$_POST['email'];
       $pass=$_POST['pass'];
       $sql="SELECT * FROM user WHERE email='$email'";
-      $res=mysqli_query($con, $sql);
+      $res=mysqli_query($connect, $sql);
       $flag=0;
       while($col=mysqli_fetch_array($res)){
         if($email==$col[1] && $pass==$col[2]){
@@ -51,18 +48,18 @@
           if($col['ac_type']=="User")
          {
           echo "<script>window.location.href='dashboard.php' </script>";
-          $res=$con->querry($sql);
+          $res=$connect->querry($sql);
          }
          if($col['ac_type']=="Creator")
          {
           echo "<script>window.location.href='admin.php' </script>";
-          $res=$con->querry($sql);
+          $res=$connect->querry($sql);
          }
         }
       }
       if($flag==0){
         echo '<script>document.getElementById("myalert").innerHTML= "Username or Password invalid" </script>';
-        mysqli_close($con);
+        mysqli_close($connect);
       }
     }
   ?>

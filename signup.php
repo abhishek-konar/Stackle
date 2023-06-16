@@ -1,5 +1,6 @@
-<?php include ('./index.php'); ?>
-
+<?php include ('./index.php'); 
+include ('./connection.php')
+?>
 
 <!--Insert Signup Form-->
 <section class="box forms">
@@ -35,32 +36,28 @@
         </section>
 
 
-
 <!--Insert Sign up Details-->
 <?php 
     error_reporting (0);
-    if (isset ($_POST['register'])){
-      $con=mysqli_connect('localhost', 'root', '', 'abhishek');
-    }
-    if($con){
+    if(isset ($_POST['register'])){
       $name= $_POST['name'];
       $email=$_POST['email'];
       $pass=$_POST['pass'];
       $con_pass=$_POST['con_pass'];
       $ac_type="User";
-      $check=mysqli_num_rows(mysqli_query($con, "SELECT * FROM user WHERE email='$email'"));
+      $check=mysqli_num_rows(mysqli_query($connect, "SELECT * FROM user WHERE email='$email'"));
       if($check>0){
         echo '<script>document.getElementById("myalert").innerHTML= "Email id alredy register" </script>';
-        mysqli_close($con);
+        mysqli_close($connect);
       }
       elseif($con_pass!=$pass)
       {
         echo '<script>document.getElementById("myalert").innerHTML= "Paswords does not Match" </script>';
-        mysqli_close($con);
+        mysqli_close($connect);
       }
       else{
         $sql="INSERT INTO user (name, email, password, ac_type) VALUE ('$name', '$email', '$pass', '$ac_type')";
-        $run=mysqli_query($con, $sql);
+        $run=mysqli_query($connect, $sql);
           session_start();
           $_SESSION['em']=$email;
           $_SESSION['pa']=$pass;

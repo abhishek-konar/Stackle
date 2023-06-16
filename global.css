@@ -1,0 +1,214 @@
+body,
+html {
+    height: 100%;
+    margin: 0;   
+    overflow: hidden;
+    font-weight: lighter;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: linear-gradient(
+        rgba(26, 26, 28, 0.6), 
+        rgba(26, 26, 28, 0.6)),
+        url(./assets/hero.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.9;
+    animation: transitionIn 1.00s;
+}
+
+.animated{
+    animation: transitionIn 1.00s;
+}
+
+@keyframes transitionIn{
+    from{
+        opacity:0;
+        transform: rotateX(-10deg);
+    }
+
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+/* Form.........................................*/
+.box{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    }
+    .form{
+    position: absolute;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+    background: #FFF;
+    }
+    .form.signup{
+    opacity: 0;
+    pointer-events: none;
+    }
+    .forms.show-signup .form.signup{
+    opacity: 1;
+    pointer-events: auto;
+    }
+    .forms.show-signup .form.login{
+    opacity: 0;
+    pointer-events: none;
+    }
+    header{
+    font-size: 30px;
+    font-weight: 600;
+    color: #232836;
+    text-align: center;
+    font-family: 'Allerta Stencil', sans-serif;
+    }
+    form{
+    margin-top: 30px;
+    }
+    .form .field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+    }
+    .field input,
+    .field button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+    }
+    .field input{
+    outline: none;
+    padding: 0 15px;
+    border: 1px solid#CACACA;
+    }
+    .field input:focus{
+    border-bottom-width: 2px;
+    }
+    .eye-icon{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 5px;
+    }
+    .field button{
+    color: #fff;
+    background-color: #0171d3;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    }
+    .field button:hover{
+    background-color: #016dcb;
+    }
+    .form-link{
+    text-align: center;
+    margin-top: 10px;
+    }
+    .form-link span,
+    .form-link a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #232836;
+    }
+    .form a{
+    color: #0171d3;
+    text-decoration: none;
+    }
+    .form-content a:hover{
+    text-decoration: underline;
+    }
+    .line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #d4d4d4;
+    }
+    .line::before{
+    content: 'Or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    color: #8b8b8b;
+    padding: 0 15px;
+    }
+    .media-options a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+   
+    img.google-img{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    }
+    a.google{
+    border: 1px solid #CACACA;
+    }
+   
+    .button, input, optgroup, select, textarea {
+      height: 40px;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      width: 370px;
+  }
+
+
+@media only screen and (max-width: 768px) {
+    .content {
+        padding-top: 0vh;
+        text-align: center;
+        padding-left: 0%;
+    }
+
+
+    .big{
+        text-align:center;
+        font-size:270%;
+    }
+
+    .medium{
+        text-align:center;
+        font-size:190%;
+    }
+    .navbar-toggler-icon{
+      display: inline-block;
+      width: 1.5em;
+      height: 1.5em;
+      vertical-align: middle;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 100%;
+
+}
+}
