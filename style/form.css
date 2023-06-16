@@ -29,11 +29,11 @@
     pointer-events: none;
 }
 header{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     color: #232836;
     text-align: center;
-    font-family: 'Allerta Stencil', sans-serif;
+    font-family: 'Tilt Neon', cursive;
 }
 
 .form .field{
@@ -117,3 +117,12 @@ header{
     line-height: inherit;
     width: 370px;
   }
+
+.large
+{
+    font-size: 30px;
+    font-weight: 600;
+    color: #232836;
+    text-align: center;
+    font-family: 'Tilt Neon', cursive;
+}

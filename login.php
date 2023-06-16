@@ -6,7 +6,7 @@ include ('./connection.php');
 <section class="box forms">
             <div class="form login">
                 <div class="form-content">
-                    <header>Login</header>
+                  <header class="large">Login</header>
                     <form method="post" action="" name="register" onsubmit="return myfunc()"> 
                         <div class="field input-field">
                         <input class="input" type="text" name="email" placeholder="Email">

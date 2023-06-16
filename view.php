@@ -25,47 +25,47 @@ $rating=$rsl['rating'];
                           if($rating=="1")
                           {
                             echo 
-                            "<img src='./assets/star.png'class='r'>
-                            <img src='./assets/star_n.png'class='r'>
-                            <img src='./assets/star_n.png'class='r'>
-                            <img src='./assets/star_n.png'class='r'>
-                            <img src='./assets/star_n.png'class='r'>";
+                            "<img src='./assets/star.png'class='rating'>
+                            <img src='./assets/star_n.png'class='rating'>
+                            <img src='./assets/star_n.png'class='rating'>
+                            <img src='./assets/star_n.png'class='rating'>
+                            <img src='./assets/star_n.png'class='rating'>";
                           }
                           if($rating=="2")
                           {
                             echo
-                              "<img src='./assets/star.png'class='r'>
-                              <img src='./assets/star.png'class='r'>
-                              <img src='./assets/star_n.png'class='r'>
-                              <img src='./assets/star_n.png'class='r'>
-                              <img src='./assets/star_n.png'class='r'>";
+                              "<img src='./assets/star.png'class='rating'>
+                              <img src='./assets/star.png'class='rating'>
+                              <img src='./assets/star_n.png'class='rating'>
+                              <img src='./assets/star_n.png'class='rating'>
+                              <img src='./assets/star_n.png'class='rrating'>";
                           }
                           if($rating=="3")
                           {
                             echo 
-                                "<img src='./assets/star.png'class='r'>
-                                <img src='./assets/star.png'class='r'>
-                                <img src='./assets/star.png'class='r'>
-                                <img src='./assets/star_n.png'class='r'>
-                                <img src='./assets/star_n.png'class='r'>";
+                                "<img src='./assets/star.png'class='rating'>
+                                <img src='./assets/star.png'class='rating'>
+                                <img src='./assets/star.png'class='rating'>
+                                <img src='./assets/star_n.png'class='rating'>
+                                <img src='./assets/star_n.png'class='rating'>";
                           }
                           if($rating=="4")
                           {
                             echo 
-                                "<img src='./assets/star.png'class='r'>
-                                <img src='./assets/star.png'class='r'>
-                                <img src='./assets/star.png'class='r'>
-                                <img src='./assets/star.png'class='r'>
-                                <img src='./assets/star_n.png'class='r'>";
+                                "<img src='./assets/star.png'class='rating'>
+                                <img src='./assets/star.png'class='rating'>
+                                <img src='./assets/star.png'class='rating'>
+                                <img src='./assets/star.png'class='rating'>
+                                <img src='./assets/star_n.png'class='rating'>";
                           }
                           if($rating=="5")
                           {
                             echo 
-                                "<img src='./assets/star.png'class='r'>
-                                <img src='./assets/star.png'class='r'>
-                                <img src='./assets/star.png'class='r'>
-                                <img src='./assets/star.png'class='r'>
-                                <img src='./assets/star.png'class='r'>";
+                                "<img src='./assets/star.png'class='rating'>
+                                <img src='./assets/star.png'class='rating'>
+                                <img src='./assets/star.png'class='rating'>
+                                <img src='./assets/star.png'class='rating'>
+                                <img src='./assets/star.png'class='rating'>";
                           }
                         
                         ?>
@@ -81,7 +81,7 @@ $rating=$rsl['rating'];
     </div>
 
 <!--Display Smilar product-->
-    <p class="lead text-center text-white mb-4">Similler Books</p>
+    <header class="lead text-center text-white mb-4">Similler Books</header>
     <div class="row">
       <?php
         $q="SELECT * FROM product WHERE product_type='$product_type' AND NOT id='$id' ";

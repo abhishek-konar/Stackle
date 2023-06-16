@@ -4,7 +4,7 @@
 <section class="box forms">
             <div class="form login">
                 <div class="form-content">
-                    <header>Edit your address</header>
+                    <header class="large">Edit your address<</header>
                     <form name="insert" method="post" action="" onsubmit="return myfunction()"> 
                         <div class="field input-field">
                         <input class="form-control" type="text" id="name" name="name"  placeholder="Full name (First and Last name)" maxlength="50">

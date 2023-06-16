@@ -6,7 +6,7 @@ include ('./connection.php')
 <section class="box forms">
             <div class="form login">
                 <div class="form-content">
-                    <header>Sign up</header>
+                  <header class="large">Sign up</header>
                     <form method="post" action="" name="register" onsubmit="return myfunc()"> 
                         <div class="field input-field">
                           <input class="textbox" class="input" type="text" name="name" placeholder="Name">
@@ -28,7 +28,7 @@ include ('./connection.php')
                         </div>
                     </form>
                     <div class="form-link">
-                        <span>Existing User? <a href="signup.php" class="link signup-link">login</a></span>
+                        <span>Existing User? <a href="login.php" class="link signup-link">login</a></span>
                     </div>
                     <p style="color:red" id="myalert"></p>
                 </div>

@@ -128,19 +128,7 @@
   line-height: 1.2;
   
 }
-header {
-    font-size: 30px;
-    font-weight: 300;
-    color: #c4552d;
-    text-align: center;
-    font-family: 'Be Vietnam Pro', sans-serif;
-}
-.card-header 
-{
-  font-size: 20px;
-  font-weight: 900;
-  font-family: 'Roboto', sans-serif;
-}
+
 .bold
 {
   font-weight: 600;
