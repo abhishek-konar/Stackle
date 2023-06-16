@@ -1,7 +1,5 @@
 <?php include ('./server.php'); 
 include ('./connection.php')?>
-
-
 <div class="pt-5 pb-5">
     <div class="container">
       <div class="row">
