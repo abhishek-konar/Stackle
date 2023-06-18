@@ -2,7 +2,7 @@
 <section class="box forms" >
             <div class="form login">
                 <div class="form-content">
-                    <header class="large">Add Your Product</header>
+                    <header>Add Your Product</header>
                     <form method="post" name="insert" enctype="multipart/form-data"> 
                         <div class="field input-field">
                           <input class="input" type="text" name="name" placeholder="Product Name" maxlength="60">

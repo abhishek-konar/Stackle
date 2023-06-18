@@ -11,9 +11,8 @@
     <link rel="stylesheet"  href="./style/form.css"/>
     <link rel="stylesheet"  href="./style/navbar.css"/>
     <link rel="stylesheet"  href="./style/media.css"/>
-     <!--For Script-->
+    
     <script src="myscripts.js"></script>
-     <!--For Bootstrap and ajax-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>

@@ -52,7 +52,7 @@ if($total_price>900)
             <div class="card border rounded-0">
                 <div class="card-body pt-1 text-center">
                     <img class='empty_cart' src='./assets/try.gif'/>
-                    <a class='nav-link' href='dashboard.php' style="text-decoration: none; color: #565959;><p class="text-info">Pick up where you left off</p></a>
+                    <a class='nav-link' href='dashboard.php' style="text-decoration: none; color: #565959;"><p class="text-info">Pick up where you left off</p></a>
             </div>
         </div>
         </div>
@@ -110,6 +110,7 @@ if($total_price>900)
                                 <td class="text-danger bold"><?php echo '₹'. $total_amount;?></td>
                             </tr>
                         </tbody>
+
                     </table>
                 </div>
             </div>

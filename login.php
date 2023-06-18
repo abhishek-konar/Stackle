@@ -6,7 +6,7 @@ include ('./connection.php');
 <section class="box forms">
             <div class="form login">
                 <div class="form-content">
-                  <header class="large">Login</header>
+                    <header class="large">Login</header>
                     <form method="post" action="" name="register" onsubmit="return myfunc()"> 
                         <div class="field input-field">
                         <input class="input" type="text" name="email" placeholder="Email">
@@ -35,7 +35,7 @@ include ('./connection.php');
     error_reporting (0);
     if(isset ($_POST['register'])){
       $email=$_POST['email'];
-      $pass=$_POST['pass'];
+      $pass=md5($_POST['pass']);
       $sql="SELECT * FROM user WHERE email='$email'";
       $res=mysqli_query($connect, $sql);
       $flag=0;

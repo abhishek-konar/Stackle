@@ -5,7 +5,7 @@ include ('./connection.php');
 session_start();
 $total_price=$_SESSION['total'];
 $email=$_SESSION['em'];
-//Price Calculation
+//Price Calculation function
 if($total_price>0)
 {   $delivery_Charges="₹99";
     $deli_charges="99";
@@ -45,45 +45,63 @@ if($total_price>900)
 
 <div class="container p-4">
     <div class="card-header bg-light">
-    <header>DELEVERY ADDRESS</header>
+        DELEVERY ADDRESS
     </div>
     <div class="row">
         <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12 pt-2">
         <form method="post" action="" name="register">
             <?php
-                    $q="SELECT * FROM address WHERE email='$email'";
-                    $res=mysqli_query($connect, $q);
-                    while($row=mysqli_fetch_assoc($res)){
-                    $name=$row['name'];
-                    $phone=$row['phone'];
-                    $country=$row['country'];
-                    $pin=$row['pin'];
-                    $area=$row['area'];
-                    $city=$row['city'];
-                    $land=$row['land'];
-                    $state=$row['state'];
-                    $phone=$row['phone'];
-                    $id=$row['id'];
-                    $address=$name;
-                    if($row['address_type']=='Defult')
+                    //Check for address present
+                    $check=mysqli_num_rows(mysqli_query($connect, "SELECT * FROM address WHERE email='$email'"));
+                    if($check>0)
                     {
-                         $checked='Checked';
+                        $q="SELECT * FROM address WHERE email='$email'";
+                        $res=mysqli_query($connect, $q);
+                        while($row=mysqli_fetch_assoc($res)){
+                        //Collect address data from database
+                        $name=$row['name'];
+                        $phone=$row['phone'];
+                        $country=$row['country'];
+                        $pin=$row['pin'];
+                        $area=$row['area'];
+                        $city=$row['city'];
+                        $land=$row['land'];
+                        $state=$row['state'];
+                        $phone=$row['phone'];
+                        $id=$row['id'];
+                        $address=$name;
+                        $address=$area. ','. $city. ',' .$state. ',' .$pin. ',Mobile Number: '. $phone. ',Landmark: '. $land ;
+                        //Display Defult address in radio bottum
+                        if($row['address_type']=='Defult')
+                        {
+                            $checked='Checked';
+                        }
+                        else
+                        {
+                            $checked='';
+                        }
+                        echo 
+                            " <div class='card border rounded-0'>
+                                <div class='card-body pt-1'>
+                                    <input type='radio' name='idd' value='$id' $checked>
+                                    <label><h5 class='card-title'>".$name."</h5></label>
+                                    <p class='card-text'>". $address."</p>
+                                </div>
+                            </div>";
+                        }                   
                     }
                     else
                     {
-                        $checked='';
-                    }
-                    $address=$area. ','. $city. ',' .$state. ',' .$pin. ',Mobile Number: '. $phone. ',Landmark: '. $land ;
                     echo 
-                    " 
-                    <div class='card border rounded-0'>
-                        <div class='card-body pt-1'>
-                            <input type='radio' name='idd' value='$id' $checked>
-                            <label><h5 class='card-title'>".$name."</h5></label>
-                            <p class='card-text'>". $address."</p>
-                        </div>
-                    </div>";
-}
+                        " <div class='card border rounded-0'>
+                            <div class='card-body pt-1 text-center'>
+                            <a href='add_address.php' style='text-decoration: none; color: #565959;'>
+                                <img src='./assets/add_plus.png' class='round' alt='img'>
+                                <h6>Add Yours delivery address</h6>
+                            </div>
+                            </a>
+                        </div>";
+                    }
             ?>
         </div>
             <div class="mb-4 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12 pt-2">
@@ -111,23 +129,25 @@ if($total_price>900)
                             </tr>
                         </tbody>
                     </table>
-                        <td class='bg-light'><button class='btn btn-warning btn-block' name="register">Place your order</button></td>
+                        <?php
+                            //Display for Order button if address present
+                            if($check>0)
+                            {   
+                                echo "<td class='bg-light'><button class='btn btn-warning btn-block' name='register'>Place your order</button></td>";
+                            }
+                        ?>
                     </form>
             </div>
             </div>
         </div>
     </div>
 </div>
-
 <?php
-
-
 
 
  if(isset ($_POST['register']))
  {
     $idd=$_POST['idd'];
-
     //Function for Collect of Data from Address
     $qr="SELECT * FROM address WHERE id='$idd'";
     $re=mysqli_query($connect, $qr);
@@ -140,7 +160,6 @@ if($total_price>900)
     $land=$ro['land'];
     $state=$ro['state'];
     $order_placed=date('d M Y');
-        
     //Function for insert data into Order
     $image_name='khhkh';
     $deli_address=$name. ','. $city. ',' .$state. ',' .$pin. ','.  $phone. ','. $land ;
@@ -153,7 +172,6 @@ if($total_price>900)
     $r=mysqli_query($connect, $qr);
     echo "<script>window.location.href='yourorders.php' </script>";
     }
-    
  }
 
 ?>

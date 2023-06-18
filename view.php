@@ -38,7 +38,7 @@ $rating=$rsl['rating'];
                               <img src='./assets/star.png'class='rating'>
                               <img src='./assets/star_n.png'class='rating'>
                               <img src='./assets/star_n.png'class='rating'>
-                              <img src='./assets/star_n.png'class='rrating'>";
+                              <img src='./assets/star_n.png'class='rating'>";
                           }
                           if($rating=="3")
                           {
@@ -81,7 +81,7 @@ $rating=$rsl['rating'];
     </div>
 
 <!--Display Smilar product-->
-    <header class="lead text-center text-white mb-4">Similler Books</header>
+    <p class="lead text-center text-white mb-4">Similler Books</p>
     <div class="row">
       <?php
         $q="SELECT * FROM product WHERE product_type='$product_type' AND NOT id='$id' ";
@@ -95,7 +95,7 @@ $rating=$rsl['rating'];
         echo 
         "<div class='col-lg-4 col-sm-6'>".
           "<div class='item'>".
-              "<img src='./assets/books/".$image_name."' class='round'>".
+              "<img src='./assets/books/".$image_name."'class='round'>".
               "<h6>". $name. "</h6>".
               "<p> Price: ".$price."</p>".
               "<a href='manage_cart.php?id=$row[id]' class='btn btn-warning mr-2'>Add to cart</a>".

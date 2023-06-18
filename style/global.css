@@ -17,8 +17,8 @@ html {
 }
 body {
     background: linear-gradient(
-        rgba(26, 26, 28, 0.6), 
-        rgba(26, 26, 28, 0.6)),
+        rgba(24, 26, 28, 0.3), 
+        rgba(24, 26, 28, 0.3)),
         url(../assets/hero.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;

@@ -6,7 +6,7 @@ include ('./connection.php')
 <section class="box forms">
             <div class="form login">
                 <div class="form-content">
-                  <header class="large">Sign up</header>
+                    <header class="large">Sign up</header>
                     <form method="post" action="" name="register" onsubmit="return myfunc()"> 
                         <div class="field input-field">
                           <input class="textbox" class="input" type="text" name="name" placeholder="Name">
@@ -18,7 +18,7 @@ include ('./connection.php')
                           <input class="password" type="password" name="pass" placeholder="Password">
                         </div>
                         <div class="field input-field">
-                          <input class="password" type="password" name="conpass" placeholder="Confirm Password">
+                          <input class="password" type="password" name="con_pass" placeholder="Confirm Password">
                         </div>
                         <div class="form-link">
                             <a href="#" class="forgot-pass">Forgot password?</a>
@@ -42,15 +42,15 @@ include ('./connection.php')
     if(isset ($_POST['register'])){
       $name= $_POST['name'];
       $email=$_POST['email'];
-      $pass=$_POST['pass'];
-      $con_pass=$_POST['conpass'];
+      $pass=md5($_POST['pass']);
+      $con_pass=md5($_POST['con_pass']);
       $ac_type="User";
       $check=mysqli_num_rows(mysqli_query($connect, "SELECT * FROM user WHERE email='$email'"));
       if($check>0){
         echo '<script>document.getElementById("myalert").innerHTML= "Email id alredy register" </script>';
         mysqli_close($connect);
       }
-      elseif($conpass!=$pass)
+      elseif($con_pass!=$pass)
       {
         echo '<script>document.getElementById("myalert").innerHTML= "Paswords does not Match" </script>';
         mysqli_close($connect);
@@ -61,7 +61,10 @@ include ('./connection.php')
           session_start();
           $_SESSION['em']=$email;
           $_SESSION['pa']=$pass;
-        echo "<script>window.location.href='dashboard.php' </script>";
+          if($ac_type=="User")
+          {
+            echo "<script>window.location.href='dashboard.php' </script>";
+          }
       }
     }
   ?>

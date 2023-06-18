@@ -1,5 +1,11 @@
 <?php include ('./server.php'); 
-include ('./connection.php')?>
+include ('./connection.php');
+error_reporting(0);
+session_start();
+$email=$_SESSION['em'];
+?>
+
+
 <div class="pt-5 pb-5">
     <div class="container">
       <div class="row">
@@ -19,9 +25,7 @@ include ('./connection.php')?>
 
 <!--All address Details-->
 <?php
-  error_reporting(0);
-  session_start();
-  $email=$_SESSION['em'];
+        
   $q="SELECT * FROM address WHERE email='$email'";
   $res=mysqli_query($connect, $q);
   while($row=mysqli_fetch_assoc($res)){
@@ -34,6 +38,7 @@ include ('./connection.php')?>
     $land=$row['land'];
     $state=$row['state'];
     $phone=$row['phone'];
+    $address_type=$row['address_type'];
     echo 
       "<div class='col-lg-4 col-sm-6'>".
         "<div class='item'>".
@@ -42,21 +47,27 @@ include ('./connection.php')?>
           "<p>".$city. ", ". $state. " " .$pin."</p>".
           "<p> Landmar: ".$land."</p>".
           "<p>".$country."</p>".
-          "<p> Phone Number: ".$phone."</p>".
-          "<a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='update.php?id=$row[id]'>Edit</a>
-          &nbsp; | &nbsp;".
-          "<a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='delete.php?id=$row[id]'> Remove</a>
-          &nbsp; | &nbsp;
-          <a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='#'>Set as Defult</a>
-        </div>
-      </div>";       
+          "<p> Phone Number: ".$phone."</p>";
+
+          if($address_type=="Defult")
+          {
+            echo "<a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='update.php?id=$row[id]'>Edit</a>
+          </div>
+        </div>";
+          }
+          else
+          {
+            echo "<a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='update.php?id=$row[id]'>Edit</a>
+            &nbsp; | &nbsp;".
+            "<a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='delete.php?id=$row[id]'> Remove</a>
+            &nbsp; | &nbsp;
+            <a id='ya-myab-address-edit-btn-0 'class='a-link-normal edit-link' href='defult.php?id=$row[id]'>Set as Defult</a>
+          </div>
+      </div>";
+          }      
 }
 ?>
       </div>
     </div>
 </div>
-
-
-
-
 
