@@ -8,12 +8,13 @@ $res=mysqli_query($c, $q);
 ?>
 
 <body>
-  <div class="container">
+  <div class="container p-4">
+  <div class="card-header bg-light">
+  <header class="text-left">DELEVERY ADDRESS</header>
+</div>
     <div class="row">
-        <div class="col-lg-12 text-center border rounded bg-light my-4">
-            <header class="large">Shopping Cart</header>
-        </div>
-        <div class="col-lg-9">
+        
+    <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12 pt-2">
         <table class="table">
             <thead class="text-center">
                 <tr>
@@ -37,7 +38,7 @@ $res=mysqli_query($c, $q);
                         echo 
                         "<tr>
                             <td  class='bg-light'>"."<img src='./assets/books/".$image_name."'class='round'>"."</td>
-                            <td  class='bg-light'>". $item_nem. "</td>
+                            <td  class='bg-light item_nam'>". $item_nem. "</td>
                             <td class='bg-light'>". $price. "<input type='hidden' class='iprice' value='$price'></td>
                             <td class='bg-light'><input class='text-center w-50 iquantity' onchange='subTotal()' type='number' value='$qty' min='1' max='10'></td>
                             <td class='bg-light itotal'></td>
@@ -57,7 +58,7 @@ $res=mysqli_query($c, $q);
         else
         {
             echo 
-                "<div class='col-lg-3'>
+                "<div class='col-lg-3 my-2'>
                     <div class='border bg-light rounded p-4 w-100'>
                         <h4 class='text-left'>Subtotal:</h4>
                         <h5 class='text-right'id='gtotal'></h5>

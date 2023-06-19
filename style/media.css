@@ -25,4 +25,11 @@
       background-position: 50%;
       background-size: 100%;
 }
+.item_nam
+      {
+        word-break: break-all;
+      }
+      .round{
+        width: 30px;
+    }
 }
