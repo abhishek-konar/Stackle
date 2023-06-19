@@ -31,11 +31,13 @@
 
 		 <!--Tab 3-->
 		 <div class="col-lg-4 col-sm-6">
+     <a href="security.php" style="text-decoration: none; color: #565959;">
         <div class="item">
           <img src="./assets/key.png" class="round" alt="img">
           <h6>Login & Security</h6>
           <p>Edit login, name and mobile number</p>
         </div>
+      </a>
       </div>
 </div>
 </body>

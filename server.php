@@ -56,7 +56,7 @@ $run=mysqli_query($c, $sql);
 $count_cart_items=mysqli_num_rows($run);
 ?>
 
-<!-------------------Admin Navbar-------------------->
+<!-------------------Navbar-------------------->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="dashboard.php">Stackle</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,7 +64,7 @@ $count_cart_items=mysqli_num_rows($run);
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav ms-auto">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <?php echo "Hellow, ". $n; ?>
@@ -78,7 +78,7 @@ $count_cart_items=mysqli_num_rows($run);
         <a class="nav-link" href="mycart.php"><img class="cart" src="https://img.icons8.com/fluency/48/shopping-cart.png" alt="shopping-cart"/><sup><?php echo $count_cart_items?></sup></a></a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-2 my-lg-0 w-5">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
@@ -87,8 +87,7 @@ $count_cart_items=mysqli_num_rows($run);
 
 
 
-
-
+<!-------------------Search Box-------------------->
 
 
 

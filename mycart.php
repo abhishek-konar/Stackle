@@ -11,7 +11,7 @@ $res=mysqli_query($c, $q);
   <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center border rounded bg-light my-4">
-            <header>Shopping Cart</header>
+            <header class="large">Shopping Cart</header>
         </div>
         <div class="col-lg-9">
         <table class="table">

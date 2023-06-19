@@ -44,8 +44,9 @@ if($total_price>900)
 ?>
 
 <div class="container p-4">
+
     <div class="card-header bg-light">
-        DELEVERY ADDRESS
+    <header class="text-left">DELEVERY ADDRESS</header>
     </div>
     <div class="row">
         <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12 pt-2">

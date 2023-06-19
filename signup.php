@@ -45,6 +45,7 @@ include ('./connection.php')
       $pass=md5($_POST['pass']);
       $con_pass=md5($_POST['con_pass']);
       $ac_type="User";
+      $mobile="Defult";
       $check=mysqli_num_rows(mysqli_query($connect, "SELECT * FROM user WHERE email='$email'"));
       if($check>0){
         echo '<script>document.getElementById("myalert").innerHTML= "Email id alredy register" </script>';
@@ -56,7 +57,7 @@ include ('./connection.php')
         mysqli_close($connect);
       }
       else{
-        $sql="INSERT INTO user (name, email, password, ac_type) VALUE ('$name', '$email', '$pass', '$ac_type')";
+        $sql="INSERT INTO user (name, email, password, ac_type, mobile) VALUE ('$name', '$email', '$pass', '$ac_type', '$mobile')";
         $run=mysqli_query($connect, $sql);
           session_start();
           $_SESSION['em']=$email;
