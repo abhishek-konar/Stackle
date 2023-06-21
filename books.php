@@ -1,4 +1,5 @@
 <?php include ('./server.php');
+include ('./connection.php');
 error_reporting(0);
 session_start(); 
 ?>
@@ -10,9 +11,8 @@ session_start();
         error_reporting(0);
         session_start();
         $email=$_SESSION['em'];
-        $c=mysqli_connect('localhost', 'root', '', 'abhishek');
         $q="SELECT * FROM product WHERE product_type='Book'";
-        $res=mysqli_query($c, $q);
+        $res=mysqli_query($connect, $q);
         while($row=mysqli_fetch_assoc($res)){
           $name=$row['name'];
           $categories_id=$row['categories_id'];

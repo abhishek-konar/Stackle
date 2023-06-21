@@ -1,9 +1,9 @@
 <?php  
 error_reporting(0);
+include ('./connection.php');
 $id=$_GET['id'];
-$cont=mysqli_connect('localhost', 'root', '', 'abhishek');
 $ql="DELETE FROM address WHERE id='$id'";
-$run=mysqli_query($cont, $ql);
+$run=mysqli_query($connect, $ql);
 if($run){
     echo "<script>window.location.href='address.php' </script>";
 }

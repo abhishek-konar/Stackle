@@ -1,10 +1,4 @@
 
-<?php
-error_reporting(0);
-session_start();
-$email=$_SESSION['em'];
-$pass=$_SESSION['pa'];
-?>
 
 <!DOCTYPE html>
 <head>
@@ -14,9 +8,10 @@ $pass=$_SESSION['pa'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-    <meta name="description" content="Lenstack"/>
-        <meta name="next-head-count" content="6"/>
-    <title>Document</title>
+    <meta name="description" content="Snowlake"/>
+    <link rel="icon" type="icon" href="./assets/logo.png">
+    <meta name="next-head-count" content="6"/>
+    <title>Snowlake</title>
     <!--For Stylesheet-->
     <link rel="stylesheet"  href="./style/global.css"/>
     <link rel="stylesheet"  href="./style/navbar.css"/>
@@ -38,7 +33,7 @@ $pass=$_SESSION['pa'];
 <!-------------------Navbar-------------------->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container" style="min-width: 90%;">
-  <a class="navbar-brand" href="./">Stackle</a>
+  <a class="navbar-brand" href="./">Snowlake</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

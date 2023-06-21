@@ -1,5 +1,5 @@
-<?php include ('./server.php'); ?>
-
+<?php include ('./server.php'); 
+include ('./connection.php');?>
 <!--Address Form-->
 <section class="box forms">
             <div class="form login">
@@ -85,20 +85,19 @@
         $state=$_POST['state'];
         $city=$_POST['city'];
         $Country="India";
-        $con=mysqli_connect('localhost', 'root', '', 'abhishek');
-        $check=mysqli_num_rows(mysqli_query($con, "SELECT * FROM address WHERE email='$email'"));
+        $check=mysqli_num_rows(mysqli_query($connect, "SELECT * FROM address WHERE email='$email'"));
       if($check=="0")
       {
         $address_type="Defult";
         $sql="INSERT INTO address (email, Country, name, phone, pin, area, land, city, state, address_type) VALUE ('$email', '$Country', '$name', '$phone', '$pin', '$area', '$land', '$city', '$state', '$address_type')";
-        $run=mysqli_query($con, $sql);
+        $run=mysqli_query($connect, $sql);
         echo "<script>window.location.href='address.php' </script>";
       }
       else
       {
         $address_type="No";
         $sql="INSERT INTO address (email, Country, name, phone, pin, area, land, city, state, address_type) VALUE ('$email', '$Country', '$name', '$phone', '$pin', '$area', '$land', '$city', '$state', '$address_type')";
-        $run=mysqli_query($con, $sql);
+        $run=mysqli_query($connect, $sql);
         echo "<script>window.location.href='address.php' </script>";
       }
 

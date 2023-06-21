@@ -1,9 +1,17 @@
+<?php 
+error_reporting(0);
+include ('./connection.php');
+session_start();
+$email=$_SESSION['em'];
+$pass=$_SESSION['pa'];
+?>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Snowlake</title>
+    <link rel="icon" type="icon" href="./assets/logo.png">
 
     <!--For Stylesheet-->
     <link rel="stylesheet"  href="./style/global.css"/>
@@ -31,13 +39,8 @@
 
 <!--For User Name-->
 <?php
-error_reporting(0);
-session_start();
-$email=$_SESSION['em'];
-$pass=$_SESSION['pa'];
-$c=mysqli_connect('localhost', 'root', '', 'abhishek');
 $q="SELECT * FROM user WHERE email='$email'AND password='$pass'";
-$res=mysqli_query($c, $q);
+$res=mysqli_query($connect, $q);
 if(mysqli_num_rows($res)==0)
 {
     session_start();
@@ -52,13 +55,13 @@ while($row=mysqli_fetch_assoc($res)){
 
 //Function to get cart item numbers
 $sql="SELECT * FROM cart WHERE email='$email'";
-$run=mysqli_query($c, $sql);
+$run=mysqli_query($connect, $sql);
 $count_cart_items=mysqli_num_rows($run);
 ?>
 
 <!-------------------Navbar-------------------->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="dashboard.php">Stackle</a>
+  <a class="navbar-brand" href="dashboard.php">Snowlake</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -85,9 +88,6 @@ $count_cart_items=mysqli_num_rows($run);
   </div>
 </nav>
 
-
-
-<!-------------------Search Box-------------------->
 
 
 

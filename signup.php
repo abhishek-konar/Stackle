@@ -1,4 +1,6 @@
-<?php include ('./index.php'); 
+<?php 
+error_reporting (0);
+include ('./index.php'); 
 include ('./connection.php')
 ?>
 
@@ -38,7 +40,6 @@ include ('./connection.php')
 
 <!--Insert Sign up Details-->
 <?php 
-    error_reporting (0);
     if(isset ($_POST['register'])){
       $name= $_POST['name'];
       $email=$_POST['email'];

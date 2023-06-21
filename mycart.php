@@ -1,10 +1,10 @@
 <?php include ('./server.php'); 
+include ('./connection.php');
 error_reporting(0);
 session_start();
 $email=$_SESSION['em'];
-$c=mysqli_connect('localhost', 'root', '', 'abhishek');
 $q="SELECT * FROM cart WHERE email='$email'";
-$res=mysqli_query($c, $q);
+$res=mysqli_query($connect, $q);
 ?>
 
 <body>

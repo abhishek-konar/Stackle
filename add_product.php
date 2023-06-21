@@ -1,4 +1,5 @@
-<?php include ("./admin.php");?>
+<?php include ("./admin.php");
+include ('./connection.php');?>
 <section class="box forms" >
             <div class="form login">
                 <div class="form-content">
@@ -8,7 +9,7 @@
                           <input class="input" type="text" name="name" placeholder="Product Name" maxlength="60">
                         </div>
                         <div class="field input-field pt-1">
-                          <input  class="password" type="number" name="price" placeholder="Price" maxlength="100">
+                          <input  class="password"  name="price" placeholder="Price" maxlength="100">
                         </div>
                         <div class="field input-field pt-1">
                             <textarea class="form-control" placeholder="Leave a comment here"  name="description"></textarea>
@@ -37,8 +38,7 @@
   //Function of Add Product
  error_reporting (0);
  if (isset ($_POST['insert'])){
-  $con=mysqli_connect('localhost', 'root', '', 'abhishek');
-  if($con){
+  if($connect){
     //Function to get All data from Input
     $name= $_POST['name'];
     $price=$_POST['price'];
@@ -64,7 +64,7 @@
 
     //Create Connection and Store Data in the Database
       $sql="INSERT INTO product (categories_id, name, price,  image_name, description, product_type) VALUE ('$random_number', '$name', '$price',  '$re_name', '$description', '$product_type')";
-      $run=mysqli_query($con, $sql);
+      $run=mysqli_query($connect, $sql);
       echo "<script>window.location.href='admin.php' </script>";
     }
     

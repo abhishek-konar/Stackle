@@ -1,15 +1,11 @@
-
-
 <?php include ('./server.php');
-
+include ('./connection.php');
 error_reporting(0);
 session_start();
 $email=$_SESSION['em'];
 $pass=$_SESSION['pa'];
-$c=mysqli_connect('localhost', 'root', '', 'abhishek');
 $q="SELECT * FROM user WHERE email='$email'AND password='$pass'";
-$res=mysqli_query($c, $q);
-
+$res=mysqli_query($connect, $q);
 
 //Function to get name
 while($row=mysqli_fetch_assoc($res)){
@@ -29,7 +25,7 @@ while($row=mysqli_fetch_assoc($res)){
                 <table class="table table-borderless">
                     <tbody class="text-center ">
                         <tr >
-                            <td class="text-left border-2 border-bottom"> <?php echo "<p class='bold'>Name:</p> <p> $mobile</p>"?></td>
+                            <td class="text-left border-2 border-bottom"> <?php echo "<p class='bold'>Name:</p> <p> $name</p>"?></td>
                             <td class="text-danger border-2 border-bottom"><a href="name_update.php"><button type="button" class="btn btn-primary">Edit</button></a></td>
                         </tr>
                         <tr>

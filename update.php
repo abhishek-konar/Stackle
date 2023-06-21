@@ -1,8 +1,8 @@
 <?php include ('./server.php');
+include ('./connection.php');
 $id=$_GET['id'];
-$c=mysqli_connect('localhost', 'root', '', 'abhishek');
 $q="SELECT * FROM address WHERE id='$id'";
-$r=mysqli_query($c, $q);
+$r=mysqli_query($connect, $q);
 $row=mysqli_fetch_assoc($r);
 $name=$row['name'];
 $phone=$row['phone'];
@@ -93,7 +93,7 @@ $state=$row['state'];
         $city=$_POST['city'];
         $country="India";
         $sql= "UPDATE `address` SET `country`='$country',`name`='$name',`phone`='$phone',`pin`='$pin',`area`='$area',`land`='$land',`city`='$city',`state`='$state' WHERE id='$id'";
-        $run=mysqli_query($c, $sql);
+        $run=mysqli_query($connect, $sql);
         if($run){
           echo "<script>window.location.href='address.php' </script>";
         }

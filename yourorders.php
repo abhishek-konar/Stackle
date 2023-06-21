@@ -4,7 +4,6 @@ include ('./server.php');
 include ('./connection.php');
 session_start();
 $email=$_SESSION['em'];
-
 ?>
 
 <div class="container">

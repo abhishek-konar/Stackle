@@ -2,7 +2,7 @@ function myfunc(){
     const email=document.forms["register"]["email"].value
     const name=document.forms["register"]["name"].value
     const password=document.forms["register"]["pass"].value
-    const conpass=document.forms["register"]["conpass"].value
+    const conpass=document.forms["register"]["con_pass"].value
     if(name==""){
         document.getElementById("myalert").innerHTML="Please enter yours name";
         return false;

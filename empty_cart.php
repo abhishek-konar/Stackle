@@ -41,6 +41,9 @@ if($total_price>900)
     $deli_charges="0";
     $total_amount=$total_price+$deli_charges;
 }
+
+
+
 ?>
 
 <div class="container p-4">
@@ -48,7 +51,7 @@ if($total_price>900)
         Your Stackle Cart is empty.
     </div>
     <div class="row">
-        <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12 pt-2">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pt-2">
             <div class="card border rounded-0">
                 <div class="card-body pt-1 text-center">
                     <img class='empty_cart' src='./assets/try.gif'/>
@@ -56,64 +59,6 @@ if($total_price>900)
             </div>
         </div>
         </div>
-            <div class="mb-4 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12 pt-2">
-                <div class="card">
-                <div class="card-body">
-                    <table class="table table-borderless">
-                        <thead class="text-left">
-                            <tr>
-                                <th scope="col" class="bold"> Buy it again</th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-center">
-                            <tr>
-                                <td class="text-left">Price:</td>
-                                <td class="text-success"><?php echo '₹'. $total_price; ?></td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">Delivery Charges</td>
-                                <td class="text-success"><?php echo $delivery_Charges;?></td>
-                            </tr>
-                            <tr>
-                                <td class="text-left bold">Order Total:</td>
-                                <td class="text-danger bold"><?php echo '₹'. $total_amount;?></td>
-                            </tr>
-                        </tbody>
-
-                        <tbody class="text-center">
-                            <tr>
-                                <td class="text-left">Price:</td>
-                                <td class="text-success"><?php echo '₹'. $total_price; ?></td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">Delivery Charges</td>
-                                <td class="text-success"><?php echo $delivery_Charges;?></td>
-                            </tr>
-                            <tr>
-                                <td class="text-left bold">Order Total:</td>
-                                <td class="text-danger bold"><?php echo '₹'. $total_amount;?></td>
-                            </tr>
-                        </tbody>
-
-                        <tbody class="text-center">
-                            <tr>
-                                <td class="text-left">Price:</td>
-                                <td class="text-success"><?php echo '₹'. $total_price; ?></td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">Delivery Charges</td>
-                                <td class="text-success"><?php echo $delivery_Charges;?></td>
-                            </tr>
-                            <tr>
-                                <td class="text-left bold">Order Total:</td>
-                                <td class="text-danger bold"><?php echo '₹'. $total_amount;?></td>
-                            </tr>
-                        </tbody>
-
-                    </table>
-                </div>
-            </div>
         </div>
     </div>
 </div>

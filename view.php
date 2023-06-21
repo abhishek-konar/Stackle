@@ -1,4 +1,5 @@
-<?php include ('./server.php');
+<?php 
+include ('./server.php');
 include ('./connection.php');
 error_reporting(0);
 session_start();
@@ -15,7 +16,7 @@ $price=$rsl['price'];
 $rating=$rsl['rating'];
 ?>
 
-<<div class="container p-4">
+<div class="container p-4">
     <div class="jumbotron">
         <div class="row">
             <div class="mb-4 col-xl-2 col-lg-3 col-md-4 col-sm-12 col-12">

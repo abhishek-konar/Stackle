@@ -1,18 +1,17 @@
+<?php include ('./connection.php');?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Snowlake</title>
+    <link rel="icon" type="icon" href="./assets/logo.png">
      <!--For Stylesheet-->
      <link rel="stylesheet"  href="./style/global.css"/>
     <link rel="stylesheet"  href="./style/card.css"/>
     <link rel="stylesheet"  href="./style/form.css"/>
     <link rel="stylesheet"  href="./style/navbar.css"/>
-
      <!-- Script-->
     <script src="myscripts.js"></script>
-   
      <!-- Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -20,7 +19,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
-    
     <!--For Font Style-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,9 +40,8 @@ error_reporting(0);
 session_start();
 $email=$_SESSION['em'];
 $pass=$_SESSION['pa'];
-$c=mysqli_connect('localhost', 'root', '', 'abhishek');
 $q="SELECT * FROM user WHERE email='$email'AND password='$pass'";
-$res=mysqli_query($c, $q);
+$res=mysqli_query($connect, $q);
 if(mysqli_num_rows($res)==0)
 {
     session_start();
