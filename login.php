@@ -1,4 +1,4 @@
-<?php include ("./index.php");
+<?php include ("./navbar.php");
 include ('./connection.php');
 ?>
 

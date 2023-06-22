@@ -63,4 +63,25 @@ body {
     text-align: center;
     
 }
-
+.cover {
+    width: 100vw;
+    height: 85vh;
+    color: #fff;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: left;
+    letter-spacing: .05rem;
+    animation: transitionIn .4s forwards;
+}
+.display-5 {
+    font-size: calc(1.425rem + 2.1vw);
+    font-weight: 300;
+    line-height: 1.2;
+}
+.cover
+{
+    padding-left: 7dvh;
+    letter-spacing: .05rem;
+    text-align: left;
+    font-family: Tilt Neon,cursive;
+}

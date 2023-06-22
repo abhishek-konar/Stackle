@@ -1,9 +1,8 @@
 <?php 
 error_reporting (0);
-include ('./index.php'); 
+include ("./navbar.php");
 include ('./connection.php')
 ?>
-
 <!--Insert Signup Form-->
 <section class="box forms">
             <div class="form login">

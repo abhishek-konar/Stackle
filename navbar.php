@@ -1,3 +1,36 @@
+
+
+<!DOCTYPE html>
+<head>
+    <meta charSet="utf-8"/>
+    <title>Snowlake</title>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta name="description" content="Snowlake"/>
+    <link rel="icon" type="icon" href="./assets/logo.png">
+    <meta name="next-head-count" content="6"/>
+ 
+    <!--For Stylesheet-->
+    <link rel="stylesheet"  href="./style/global.css"/>
+    <link rel="stylesheet"  href="./style/navbar.css"/>
+    <link rel="stylesheet"  href="./style/form.css"/>
+    <link rel="stylesheet"  href="./style/media.css"/>
+     <!--For Script-->
+    <script src="script.js"></script>
+    <!-- Font Style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <!-- Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+
 <!-------------------Navbar-------------------->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container" style="min-width: 90%;">
@@ -13,4 +46,3 @@
   </div>
   </div>
 </nav>
-</body>
